@@ -1,0 +1,24 @@
+<figure{{#if class}} class="{{class}}"{{/if}}>
+  <picture>
+    <!--[if IE 9]><video style="display: none;><![endif]-->
+    <source
+        data-srcset="{{cdn}}media/images/{{name}}.{{ext}}"
+        media="--device" />
+    <source
+        data-srcset="{{cdn}}media/images/{{name}}@2x.{{ext}}, {{cdn}}media/images/{{name}}@2x.{{ext}} 2x"
+        media="--laptop" />
+    <source
+        data-srcset="{{cdn}}media/images/{{name}}@2x.{{ext}}" />
+    <!--[if IE 9]></video><![endif]-->
+    <img
+        {{#if id}}id="{{id}}"{{/if}}
+        {{#if width}}width="{{width}}"{{/if}} {{#if height}}height="{{height}}"{{/if}}
+        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20{{width}}%20{{height}}'%3E%3C/svg%3E"
+        data-src="{{cdn}}media/images/{{name}}@2x.{{ext}}"
+        class="{{#unless deferLazy}}lazyload{{/unless}} {{imgClasslist}}"
+        alt="{{alt}}" />
+  </picture>
+  {{#if caption}}
+  <figcaption>{{caption}}</figcaption>
+  {{/if}}
+</figure>

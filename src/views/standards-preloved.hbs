@@ -1,0 +1,43 @@
+{{!
+ *  CNNIX Virgil - Index
+ *  ---------------------
+ *  @description :  The index handlebars template.
+ *  @author :       Kenneth Uzquiano (kenneth.uzquiano@turner.com)
+ *
+ *  The index handlebars template serves as the entry template for the
+ *  interactive's `index.html`. The content for the CNNIX Virgil project
+ *  HTML is defined in the handlebars partial `interactive.hbs`.
+ *
+ !}}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    {{> core/head meta-title="Preloved"}}
+  </head>
+
+  <body id="body">
+    {{> core/header}}
+    
+    {{> components/page-header id="standards-preloved" title="PRELOVED CERTIFIED STANDARD" copy="Giving products a trusted second life."}}
+
+    {{> components/overview title="Overview" copy="Preloved Certified gives consumers confidence that pre-owned items are genuinely used, in good condition, and helping to reduce the impact of new manufacturing and material waste."}}
+
+   
+    {{> components/eligible-products}}
+    
+    {{> components/featured-card-not-found }}
+
+    {{> components/related-standars reusable="true" refillable="true" durable="true" }}
+
+    {{> components/get-involved-form }}
+
+      
+    {{> core/footer}}
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../{{htmlWebpackPlugin.files.js}}?v={{ htmlWebpackPlugin.options.timestamp }}" async></script>
+
+  </body>
+</html>

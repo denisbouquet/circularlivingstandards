@@ -1,0 +1,26 @@
+$easing-default: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+// breakpoints
+$bp-tablet: 'tablet';
+$bp-phablet: 'phablet';
+$bp-laptop: 'laptop';
+$bp-desktop: 'desktop';
+$bp-desktop-xl: 'desktop-xl';
+$bp-desktop-xxl: 'desktop-xxl';
+
+$bp-site: $bp-tablet;
+
+/* Device Sizes */
+$mobile-xs: 320px;
+$mobile-s: 360px;
+$mobile-m: 412px;
+$mobile-l: 480px;
+$tablet-s: 600px;
+$tablet-m: 768px;
+$tablet-l: 900px;
+$tablet-xl: 1024px;
+$desktop-s: 1280px;
+$desktop-m: 1440px;
+$desktop-l: 1600px;
+$desktop-xl: 1920px;
+$desktop-xxl: 2400px;

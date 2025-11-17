@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evergreen Example</title>
+</head>
+<body>
+  <evg-skip-link>
+    <a href="#main">
+      Skip to main content
+    </a>
+  </evg-skip-link>
+  <evg-app>
+    <header slot="header">
+      <evg-section class="evg-theme-forest" padding="lg">
+        <evg-wrapper size="xl">
+          <evg-img block>
+            <img
+              alt="WRAP logo"
+              height="44"
+              loading="lazy"
+              src="/images/logo/white.svg"
+              width="152"
+            />
+          </evg-img>
+        </evg-wrapper>
+      </evg-section>
+    </header>
+
+    <evg-section class="evg-theme">
+      <main
+        id="main"
+        tabIndex={-1}
+      >
+        <evg-section padding="fluid">
+          <evg-wrapper size="xl">
+            <evg-grid>
+              <evg-grid-item small-mobile="12" tablet="8" small-desktop="7">
+                <h2 className="evg-spacing-bottom-sm">Main content</h2>
+                <p className="evg-spacing-bottom-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                  ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam.
+                </p>
+                <evg-grid>
+                  <evg-grid-item small-mobile="6" small-tablet="auto">
+                    <evg-button variant="primary" width="full-width-mobile">
+                      <button type="button">Button text</button>
+                    </evg-button>
+                  </evg-grid-item>
+                  <evg-grid-item small-mobile="6" small-tablet="auto">
+                    <evg-button width="square">
+                      <a aria-label="Link text" href="https://wrap.ngo">
+                        <evg-icon icon="external-link"></evg-icon>
+                      </a>
+                    </evg-button>
+                  </evg-grid-item>
+                </evg-grid>
+              </evg-grid-item>
+            </evg-grid>
+          </evg-wrapper>
+        </evg-section>
+      </main>
+    </evg-section>
+
+    <footer slot="footer">
+      <evg-section
+        class="evg-theme-forest"
+        padding="lg"
+      >
+        <evg-wrapper size="xl">
+          Footer content
+        </evg-wrapper>
+      </evg-section>
+      <evg-section
+        class="evg-theme-coal"
+        padding="lg"
+      >
+        <evg-wrapper size="xl">
+          <p class="evg-text-size-body-xs">
+            Footer small print
+          </p>
+        </evg-wrapper>
+      </evg-section>
+    </footer>
+  </evg-app>
+
+  <script type="module" src="/main.ts"></script>
+</body>
+</html>

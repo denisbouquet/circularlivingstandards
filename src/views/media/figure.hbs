@@ -1,0 +1,23 @@
+<figure class="{{classList}}">
+	<div class="image">
+		<picture>
+		    <!--[if IE 9]><video style="display: none;><![endif]-->
+		    <source
+		        data-srcset="{{#if useCdn}}{{cdn}}{{/if}}{{device}}"
+		        media="--device" />
+		    <source
+		        data-srcset="{{#if useCdn}}{{cdn}}{{/if}}{{laptop}}, {{#if useCdn}}{{cdn}}{{/if}}{{desktop}} 2x"
+		        media="--laptop" />
+		    <source
+		        data-srcset="{{#if useCdn}}{{cdn}}{{/if}}{{desktop}}" />
+		    <!--[if IE 9]></video><![endif]-->
+		    <img
+						id="{{id}}"
+		        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+		        data-src="{{#if useCdn}}{{cdn}}{{/if}}{{laptop}}"
+		        class="media lazyload fadeable {{align}}"
+		        alt="" />
+		</picture>
+	</div>
+	{{#if caption}}<figcaption class="caption">{{caption}}</figcaption>{{/if}}
+</figure>

@@ -1,0 +1,21 @@
+evg-header {
+    // background-color: red;
+    svg {
+        aspect-ratio: 1 / 1;
+        display: block;
+        fill: currentcolor;
+        flex: 0 0 var(--evg-icon-size);
+        height: var(--evg-icon-size);
+        min-width: var(--evg-icon-size);
+        position: relative;
+        width: var(--evg-icon-size);
+        z-index: 1;
+    }
+    path {
+        fill: currentcolor;
+    }
+
+    // evg-menu-item-content {
+    //     color: red;
+    // }
+}

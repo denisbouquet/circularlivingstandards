@@ -1,0 +1,193 @@
+
+/*********************
+GRID
+*********************/
+
+@mixin grid-type($type) {
+
+  @if $type == col-1-1 {
+    width: 100%;
+  }
+
+  @if $type == col-1-12 {
+    width: 8.33%
+  }
+
+  @if $type == col-4-12 {
+    width: 33.33%;
+  }
+
+  @if $type == col-6-12 {
+    width: 50%;
+  }
+
+  @if $type == col-10-12 {
+    width: 83.333%;
+  }
+
+
+  // offsets
+  @if $type == push-3-12 {
+    margin-left: 25%;
+  }
+
+  @if $type == push-4-12 {
+    margin-left: 33.33%;
+  }
+
+  @if $type == push-1-12 {
+    margin-left: 8.33%
+  }
+
+  @if $type == col {
+    float: left;
+    min-height: 1px;
+    padding: 0 8px; /* column-space */
+  }
+
+}
+
+
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+  @if $point == desktop-xxl {
+    @media (min-width: 2400px) { @content ; }
+  }
+  @if $point == desktop-xl {
+    @media (min-width: 1440px) { @content ; }
+  }
+  @else if $point == desktopLarge {
+    @media (min-width: 1440px) { @content ; }
+  }
+  @else if $point == desktop {
+    @media (min-width: 1120px) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 1024px) { @content ; }
+  }
+  @else if $point == site {
+    @media (min-width: 800px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 768px) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (min-width: 650px)  { @content ; }
+  }
+  @else if $point == standardMobile {
+    @media (min-width: 368px)  { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 599px)  { @content ; }
+  }
+  @else if $point == toTabletOnly {
+    @media (max-width: 799px)  { @content ; }
+  }
+}
+
+/* Mixins */
+@mixin max-width($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+@mixin min-width($res) {
+  @media screen and (min-width: $res) {
+    @content;
+  }
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*10}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+
+
+
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin attention() {
+
+    &:hover,
+    &:active,
+    &:focus {
+        @content;
+    }
+
+}
+
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before{
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}

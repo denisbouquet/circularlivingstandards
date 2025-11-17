@@ -1,0 +1,47 @@
+<div class="ae-get-involved-form">
+  <evg-supergraphic class="evg-theme-forest-light" position="bottom-left">
+    <evg-section padding="fluid" class="evg-theme-forest-light">
+      <evg-wrapper size="xxl">
+        <evg-grid gap="xl" wrap="wrap">
+          <evg-grid-item small-mobile="12" small-tablet="6">
+            <h2 class="evg-text-size-heading-lg evg-spacing-bottom-lg evg-text-transform-uppercase evg-spacing-bottom-md">
+              GET INVOLVED
+            </h2>
+            <p>Whether you : organisation getting your or products certified, a certification body wanting to join the scheme, ufacturer/brand wanting tr ontribute to standard development, please sign up here to register your interest and get involved.</p>
+          </evg-grid-item>
+
+          <evg-grid-item small-mobile="12" small-tablet="6">
+             <form>
+                  <evg-form-group orientation="horizontal" class="evg-spacing-bottom-md" key={i}>
+                      <evg-grid align-items="center">
+                        <evg-grid-item grow>
+                          <evg-label>
+                            <label htmlFor={`question-${i}`}>Question {i}</label>
+                          </evg-label>
+                        </evg-grid-item>
+                        <evg-grid-item>
+                          <evg-icon icon="circle-information" variant="default" />
+                        </evg-grid-item>
+                      </evg-grid>
+                      <evg-input>
+                        <input id={`question-${i}`} name={`question-${i}`} type="text" placeholder="Value" />
+                      </evg-input>
+                    </evg-form-group>
+
+                  <evg-grid justify-content="flex-end">
+                    <evg-grid-item>
+                      <evg-button variant="primary">
+                        <button type="submit">Submit</button>
+                      </evg-button>
+                    </evg-grid-item>
+                  </evg-grid>
+                </form>
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              {{!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> --}}
+
+          </evg-grid-item>
+        </evg-grid>
+      </evg-wrapper>
+    </evg-section>
+  </evg-supergraphic>
+</div>

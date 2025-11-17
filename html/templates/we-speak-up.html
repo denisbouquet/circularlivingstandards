@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>cinerglass</title>
+	<meta name="author" content="cinerglass">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/favicon/site.webmanifest">
+	<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	@@include('../partials/scripts.html')
+</head>
+<body data-barba="wrapper">
+	<div id="page">
+		<a href="#content" class="screen-reader-text">Skip to content</a>
+
+		@@include('../partials/header.html')
+
+		<div class="pageloader"><div></div></div>
+		<main data-barba="container" data-barba-namespace="article">
+			
+			
+			<!-- <div class="mod-spacer"></div> -->
+			
+			@@include('../partials/hero-image.html', {"image":"compliance/hero-wespeakup.jpg", "title": "We speak up", "copy":"<p><a href='#report'>REPORT YOUR CONCERN</a></p>"})
+
+		
+			<div class="container">
+				<div class="mod-columns-two mod-content ivanim-slidefade">
+					<div class="mod-columns-two__col">
+						<h2>We want to do what is right – Our <strong>we•speakup</strong> platform helps you to your hand and voice your concerns.</h2>
+
+						<p><strong>We strive to maintain transparency as well as high business ethics. Our we•speakup platform provides an opportunity to communicate on suspected wrongdoings affecting people, our organisation, society or the environment.</strong></p>
+
+						<p>The <strong>we•speakup</strong> platform makes wrongdoings less likely to occur in the first place and shows our commitment to operate in a fair way. You do not need proof of your suspicions, but all messages must be made in good faith.</p>
+						<p>You can raise your concern anonymously by using our platform, managed by a third-party. The <strong>we•speakup</strong> reporting channel can be reached on any device, including smartphones.</p>
+
+						<a href="#report" class="cta cta--blue">Report a concern now</a>
+					</div>
+					<div class="mod-columns-two__col">
+						<img src="assets/media/images/content/compliance/we-speak-up.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="mod-highlight">
+				<div class="container">
+					<div class="mod-content ivanim-slidefade">
+						<div class="mod-column-highlight cta-wrapper-white">
+							<h2>Statistical data on we•speakup case reports</h2>
+
+							<p>Click on the link below to access data on case reports:</p>
+							<a href="we-speak-up.html">Access Statistics</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="mod-columns-two mod-content ivanim-slidefade">
+					<div class="mod-columns-two__col">
+						<h2>How can I report my concern?</h2>
+
+						<p>If you have a concern or information relating to misconduct, improper circumstances or behaviour connected to Ciner GlassLtd, you can report your concern:</p>
+
+						<ul>
+							<li>Via our <strong>we•speakup</strong> platform.</li>
+							<li>Email us directly at <strong>wespeakup@cinerglass.com</strong>.</li>
+							<li>Post to: Attention Whistleblowing Officer, 23 College Hill, London EC4R 2RP.</li>
+						</ul>
+						<p><strong>More about the we•speakup platform</strong></p>
+						<p>You have access to the we•speakup platform anytime, 365 days 24/7. You can either use the we•speakup platform web form to submit your concern or you can call our we•speakup platform line.</p>
+
+						<a href="#report" class="cta cta--blue">Report my concern</a>
+					</div>
+					<div class="mod-columns-two__col">
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="mod-spacer"></div>
+
+
+			<div id="report" class="mod-highlight">
+				<div class="container">
+					<div class="mod-compliance-form mod-compliance-form--blue mod-columns-two mod-content ivanim-slidefade">
+						<div class="mod-columns-two__col mod-column-highlight cta-wrapper-white">
+							<h2>Report your concern</h2>
+							<form action="privacy-notice.html">
+								<label for="home_country">1. Select the country in which you are located.</label>
+								<select name="home_country" id="home_country">
+									<option value="">Please select</option>
+								</select>
+								<label for="incident_country">2. Select the country in which the incident took place.</label>
+								<select name="incident_country" id="incident_country">
+									<option value="">Please select</option>
+								</select>
+								<label for="company">3. Select the relevant Group company in which the incident relates.</label>
+								<select required name="b" id="company">
+									<option value="">Please select</option>
+									<option value="1">Ciner Glass Belgium</option>
+									<option value="2">Ciner Glass Ltd</option>
+									<option value="3">Ciner Glass Productions Ltd</option>
+									<option value="4">Ciner Glass Property Ltd</option>
+									<option value="5">Park Cam San. Ve Tic. A.S.</option>
+								</select>
+
+								<input type="checkbox" id="correctinfo"><label for="correctinfo">I confirm I have provided the correct information above.</label>
+								<input type="submit" value="submit">
+							</form>
+						</div>
+						<div class="mod-columns-two__col mod-column-highlight cta-wrapper-white">
+							<h2>What happens next?</h2>
+							<p>Upon submission of your report you will be given a case number. Please keep the case number and password in a safe place to ensure confidentiality.</p>
+							<p>Your case number and password will be required to gain access to the system for updates.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+
+			@@include('../partials/footer.html')
+		</main>
+
+		
+		@@include('../partials/menu.html', {"home":"true"})
+	</div>
+<script>
+	window.jQuery || document.write('<script type="text/javascript" src="assets/js/vendors/jquery.js"><\/script>')
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

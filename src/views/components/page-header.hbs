@@ -1,0 +1,24 @@
+
+<evg-grid wrap="wrap" gap="none" direction="row-reverse">
+
+	<evg-grid-item small-mobile="12" large-tablet="6" fill="true">
+
+		<evg-section padding="fluid-lg" class="evg-theme-forest">
+			<evg-wrapper size="xxl" gutter="fluid-lg">
+				<evg-breadcrumb class="evg-spacing-bottom-lg">
+					<nav aria-label="Breadcrumb">
+						<ol>
+							<li><a href="index.html">Home</a></li><li><a href="standards-reusable.html" aria-current="page">The Standards</a></li></ol>
+						</nav>
+				</evg-breadcrumb>
+				<h1 class="evg-text-transform-uppercase evg-spacing-bottom-lg">{{title}}</h1>
+				<p class="evg-spacing-bottom-lg">{{copy}}</p>
+			</evg-wrapper>
+		</evg-section>
+	</evg-grid-item>
+	<evg-grid-item small-mobile="12" large-tablet="6" fill="true">
+		<evg-img responsive="true" object-fit="cover" object-position="center" aria-hidden="true" aspect-ratio="auto">
+				<img src="media/images/hero-{{id}}.jpg" alt="{{id}}" width="400" height="400">
+		</evg-img>
+	</evg-grid-item>
+</evg-grid>

@@ -1,46 +1,77 @@
 {
-  "name": "underscores",
+  "name": "circularlivingstandards",
   "version": "1.0.0",
-  "description": "Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.",
-  "author": "Automattic Theme Team",
-  "license": "GPL-2.0-or-later",
-  "keywords": [
-    "WordPress",
-    "Theme"
-  ],
-  "homepage": "https://github.com/Automattic/_s#readme",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --config webpack.development.config.js",
+    "build": "NODE_ENV=production webpack --config webpack.production.config.js"
+  },
+  "author": "AmongsEquals, Denis Bouquet",
+  "cdn": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Automattic/_s.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Automattic/_s/issues"
+    "url": "https://github.com/denisbouquet/circularlivingstandards"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^19.2.2",
-    "dir-archiver": "^1.1.1",
-    "node-sass": "^7.0.1",
-    "rtlcss": "^3.5.0"
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.6.1",
+    "archieml": "^0.5.0",
+    "autoprefixer": "^10.4.21",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^10.0.0",
+    "babel-plugin-react-require": "^4.0.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "chalk": "^3.0.0",
+    "classnames": "^2.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
+    "dotenv": "^8.6.0",
+    "extend": "^3.0.1",
+    "file-loader": "^6.2.0",
+    "html-entities": "^2.6.0",
+    "html-webpack-plugin": "^5.6.4",
+    "htmlparser2": "^10.0.0",
+    "lazysizes": "^5.3.2",
+    "marked": "^16.2.1",
+    "mini-css-extract-plugin": "^2.9.4",
+    "moment": "^2.18.1",
+    "postcss-loader": "^8.2.0",
+    "query-string": "^9.2.2",
+    "ramda": "^0.31.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-refresh": "^0.17.0",
+    "react-router-dom": "^7.8.2",
+    "sass": "^1.92.0",
+    "sass-loader": "^16.0.5",
+    "sass-migrator": "^2.4.2",
+    "smartypants": "^0.2.2",
+    "source-map-loader": "^5.0.0",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.14",
+    "viewport-units-buggyfill": "^0.6.2",
+    "webpack-merge": "^6.0.1",
+    "webpack-stats-plugin": "^1.1.3"
   },
-  "rtlcssConfig": {
-    "options": {
-      "autoRename": false,
-      "autoRenameStrict": false,
-      "blacklist": {},
-      "clean": true,
-      "greedy": false,
-      "processUrls": false,
-      "stringMap": []
-    },
-    "plugins": [],
-    "map": false
-  },
-  "scripts": {
-    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
-    "compile:rtl": "rtlcss style.css style-rtl.css",
-    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-    "lint:js": "wp-scripts lint-js 'js/*.js'",
-    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
+  "dependencies": {
+    "@wrap.ngo/evergreen": "^1.0.1",
+    "can-autoplay": "^3.0.2",
+    "chalk": "^5.6.0",
+    "dotenv": "^17.2.2",
+    "gsap": "^3.13.0",
+    "handlebars": "^4.7.8",
+    "handlebars-loader": "^1.7.3",
+    "lodash": "^4.17.21",
+    "markdown-it": "^14.1.0",
+    "node-fetch": "^2.7.0",
+    "remark": "^15.0.1",
+    "strip-markdown": "^6.0.0",
+    "versor": "0.2.0",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
   }
 }

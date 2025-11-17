@@ -1,0 +1,41 @@
+{{!
+ *  CNNIX Virgil - Index
+ *  ---------------------
+ *  @description :  The index handlebars template.
+ *  @author :       Kenneth Uzquiano (kenneth.uzquiano@turner.com)
+ *
+ *  The index handlebars template serves as the entry template for the
+ *  interactive's `index.html`. The content for the CNNIX Virgil project
+ *  HTML is defined in the handlebars partial `interactive.hbs`.
+ *
+ !}}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    {{> core/head meta-title="Durable"}}
+  </head>
+
+  <body id="body">
+    {{> core/header}}
+    
+    {{> components/page-header id="standards-refillable" title="REFILLABLE CERTIFIED STANDARD" copy="Built to refill, not landfill."}}
+
+    {{!-- {{> components/overview title="Overview" copy="Refillable Certified verifies product systems that deliver measurable environmental benefits by refilled and reused multiple times. Not all refillable products are created equal - this Standard identifies those proven to reduce waste and emissions, based on transparent, data led assessment."}} --}}
+
+       
+    {{> components/featured-card-not-found }}
+
+    {{> components/related-standars reusable="true" preloved="true" refillable="true" }}
+
+    {{> components/get-involved-form }}
+
+      
+    {{> core/footer}}
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../{{htmlWebpackPlugin.files.js}}?v={{ htmlWebpackPlugin.options.timestamp }}" async></script>
+
+  </body>
+</html>
