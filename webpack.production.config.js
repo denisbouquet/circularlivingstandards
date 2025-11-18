@@ -23,7 +23,7 @@ var webpack = require('webpack'),
 //  -------------------
 
     baseConfig = require('./webpack.config'),
-    data = require('./src/data/data.json'),
+    // data = require('./src/data/data.json'),
     pkg = require('./package.json');
 
     pkg.icdn = pkg.cdn;
@@ -131,15 +131,60 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                 pkg : pkg,
                 inject : false
             }),
-            // new HtmlWebpackPlugin(
-            // {
-            //     filename : 'artx/index.html',
-            //     template : './src/views/artx.hbs',
-            //     prettyDate : moment().format('YYYY/MM/DD'),
-            //     timestamp : moment().format('DDMMYYhmm'),
-            //     pkg : pkg,
-            //     inject : false
-            // }),
+            new HtmlWebpackPlugin(
+            {
+                filename : 'process.html',
+                template : './src/views/process.hbs',
+                prettyDate : moment().format('YYYY/MM/DD'),
+                timestamp : moment().format('DDMMYYhmm'),
+                pkg : pkg,
+                inject : false
+            }),
+            new HtmlWebpackPlugin(
+            {
+                filename : 'terms-and-conditions.html',
+                template : './src/views/terms-and-conditions.hbs',
+                prettyDate : moment().format('YYYY/MM/DD'),
+                timestamp : moment().format('DDMMYYhmm'),
+                pkg : pkg,
+                inject : false
+            }),
+            new HtmlWebpackPlugin(
+            {
+                filename : 'privacy-policy.html',
+                template : './src/views/privacy-policy.hbs',
+                prettyDate : moment().format('YYYY/MM/DD'),
+                timestamp : moment().format('DDMMYYhmm'),
+                pkg : pkg,
+                inject : false
+            }),
+            new HtmlWebpackPlugin(
+            {
+                filename : 'accessibility-statement.html',
+                template : './src/views/accessibility-statement.hbs',
+                prettyDate : moment().format('YYYY/MM/DD'),
+                timestamp : moment().format('DDMMYYhmm'),
+                pkg : pkg,
+                inject : false
+            }),
+            new HtmlWebpackPlugin(
+            {
+                filename : 'contact.html',
+                template : './src/views/contact.hbs',
+                prettyDate : moment().format('YYYY/MM/DD'),
+                timestamp : moment().format('DDMMYYhmm'),
+                pkg : pkg,
+                inject : false
+            }),
+            new HtmlWebpackPlugin(
+            {
+                filename : 'faq.html',
+                template : './src/views/faq.hbs',
+                prettyDate : moment().format('YYYY/MM/DD'),
+                timestamp : moment().format('DDMMYYhmm'),
+                pkg : pkg,
+                inject : false
+            }),
 
             /**
              *  DefinePlugin

@@ -1,0 +1,46 @@
+.ae-logo-list {
+	&--sm {
+		evg-grid-item {
+			height: 70px;
+			display: flex;
+		}
+		img {
+			max-height: 100%;
+			width: auto;
+		}
+		evg-card-img {
+			height: 100%;
+		}
+		evg-img {
+			height: 100%;
+		}
+
+		evg-grid {
+			gap: 30px;
+		}
+
+	}
+	&--md {
+		evg-grid-item {
+			height: 76px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		evg-card-img { 
+			max-width: 165px;
+			max-height: 70px;
+		}
+
+		img {
+			object-fit: contain;
+			max-height: 100%;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		evg-grid {
+			gap: 30px;
+		}
+	}
+}

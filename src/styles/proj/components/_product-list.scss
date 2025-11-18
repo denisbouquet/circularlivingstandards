@@ -1,0 +1,19 @@
+.ae-eligible-product-list {
+	padding-top: 20px;
+	margin-bottom: 0;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		padding: 0 10px;
+		background-color: var(--evg-color-sand-50);
+		list-style: none;
+		border-radius: var(--evg-radius-xl);
+		margin-right: 10px;
+		line-height: 1;
+	}
+}

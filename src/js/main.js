@@ -1,4 +1,3 @@
-
 //  Link media
 require.context('../media/', true, /^\.\/.*\.*/);
 require.context('../fonts/', true, /^\.\/.*\.*/);
@@ -9,9 +8,6 @@ require.context('../fonts/', true, /^\.\/.*\.*/);
 // import '@wrap.ngo/evergreen/fonts';
 // // Component registration
 import '@wrap.ngo/evergreen/components'
-
-// import "https://esm.sh/@wrap.ngo/evergreen/components";
-
 
 //  Styles
 import '../styles/styles.scss';
@@ -48,9 +44,56 @@ let Site;
 
 			
 			self.megamenu();
+			self.toggleMobileMenu();
 			self.accordions();
+			self.form();
 
 			
+		},
+		formCharsUpdate: function(elt) {
+		    const $container = $(elt).closest('.js-chars-count');
+		    const $counter   = $container.parent().find('.js-chars');
+
+		    const max        = parseInt($(elt).attr('maxlength'), 10) || 255;
+		    const current    = $(elt).val().length;
+		    const remaining  = max - current;
+
+		    $counter.html(`${remaining} character(s) remaining`);
+		},
+		form: function (elt) {
+			var self = this;
+
+			$('.js-chars-count textarea').on('input', function() {
+			    self.formCharsUpdate(this);
+			});
+		},
+		toggleMobileMenu: function (elt) {
+			$('.js-toggleMobileMenu').on('click', function(){
+				if($('.mobile-menu').attr('open') != 'open') {
+					$('.mobile-menu').attr('open', 'open');
+					$('.mobile-menu').find('.icon-open-close').attr('icon', 'close');
+					$(this).find('.icon-open-close').attr('icon', 'close');
+				}
+				else {
+					$('.mobile-menu').removeAttr('open');
+					$('.mobile-menu').find('.icon-open-close').attr('icon', 'menu');
+					$(this).find('.icon-open-close').attr('icon', 'menu');
+				}
+			});
+
+			$('.js-submenu').on('click', function(){
+
+				if($(this).attr('aria-expanded') != 'true') {
+					$(this).attr('aria-expanded', 'true');
+					$(this).find('evg-icon').attr('icon', 'chevron-up');
+					$(this).parent().find('evg-collapse').attr('open', 'true');
+				}
+				else {
+					$(this).attr('aria-expanded', 'false');
+					$(this).find('evg-icon').attr('icon', 'chevron-down');
+					$(this).parent().find('evg-collapse').removeAttr('open');
+				}
+			});
 		},
 		megamenu: function (elt) {
 			$('.js-megamenu').on('click', function(){
@@ -75,10 +118,17 @@ let Site;
 			if($('.ae-accordion').length > 0){
 				$('.ae-accordion__toggle').on('click', function(e){
 					e.stopPropagation();
-					if($(this).parent().hasClass('ae-accordion--closeothers')){
-					   $(this).parent().parent().find('.ae-accordion').removeClass('is-open');
-					   $(this).parent().parent().find('.ae-accordion__content').css('max-height', 0);
+
+					if($(this).parent().hasClass('is-open')){
+
 					}
+					else {
+						if($(this).parent().hasClass('ae-accordion--closeothers')){
+						   $(this).parent().parent().find('.ae-accordion').removeClass('is-open');
+						   $(this).parent().parent().find('.ae-accordion__content').css('max-height', 0);
+						}
+					}
+
 					// open / toggle current 
 					$(this).parent().toggleClass('is-open');
 

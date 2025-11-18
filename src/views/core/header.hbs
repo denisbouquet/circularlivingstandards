@@ -1,408 +1,182 @@
 <evg-skip-link>
-  <a href="#main">
-    Skip to main content
-  </a>
+  <a href="#skip-to-content">Skip to main content</a>
 </evg-skip-link>
 <evg-app>
 
-    <evg-header
-        class="evg-theme-default"
-    >
-        <evg-header-logo>
-            <a href="index.html">
-                <img
-                    alt="WRAP logo"
-                    height="32"
-                    loading="eager"
-                    src="media/images/logo/forest.svg"
-                    width="110"
-                />
-            </a>
-        </evg-header-logo>
-        <evg-header-primary-nav>
-            <nav aria-label="Main navigation">
-                <evg-menu-item>
-                    <a href="index.html">
-                        <evg-menu-item-content>
-                            Home
-                        </evg-menu-item-content>
-                    </a>
-                </evg-menu-item>
-                <evg-menu-item>
-                    <a href="process.html">
-                        <evg-menu-item-content>
-                            Process
-                        </evg-menu-item-content>
-                    </a>
-                </evg-menu-item>
-                {{!-- <evg-menu-item>
-                    <a href="standards.html">
-                        <evg-menu-item-content>
-                            The Standards
-                        </evg-menu-item-content>
-                    </a>
-                </evg-menu-item> --}}
-                <evg-menu-item class="js-megamenu" active="false">
-                    <button type="button" aria-controls="standards" aria-expanded="false">
-                        <evg-menu-item-content>The Standards</evg-menu-item-content>
-                        <evg-icon icon="chevron-down"></evg-icon>
-                    </button>
-                </evg-menu-item>
-                <evg-menu-item>
-                    <a href="contact.html">
-                        <evg-menu-item-content>
-                            Contact
-                        </evg-menu-item-content>
-                    </a>
-                </evg-menu-item>
-                <evg-menu-item>
-                    <a href="certification.html">
-                        <evg-menu-item-content>
-                            Certification Bodies
-                        </evg-menu-item-content>
-                    </a>
-                </evg-menu-item>
-            </nav>
-        </evg-header-primary-nav>
-        <evg-header-secondary-nav>
-            <nav aria-label="Secondary navigation">
-                <evg-button variant="default">
-                    <a href="https://wrap.ngo" target="_blank">Main site<evg-icon icon="external-link"></evg-icon></a>
-                </evg-button>
-                {{!-- <evg-button
-                    variant="default"
-                    width="square"
-                >
-                    <button
-                        aria-label="Search"
-                        type="button"
-                    >
-                        <evg-icon icon="search"></evg-icon
-                                >
-                    </button>
-                </evg-button> --}}
-            </nav>
-        </evg-header-secondary-nav>
-        <evg-header-mobile-nav>
-            <evg-button
-                variant="default"
-                width="square"
-            >
-                <button
-                    aria-label="Open mobile navigation"
-                    {{!-- onClick={function Xs(){}} --}}
-                    type="button"
-                >
-                    <evg-icon icon="menu"></evg-icon>
-                </button>
-            </evg-button>
-        </evg-header-mobile-nav>
-    </evg-header>
+<evg-header class="evg-theme-default">
+	<evg-header-logo>
+		<a href="index.html">
+			<img
+				alt="WRAP logo"
+				height="32"
+				loading="eager"
+				src="media/images/logo/forest.svg"
+				width="110"
+			/>
+		</a>
+	</evg-header-logo>
+	<evg-header-primary-nav>
+		<nav aria-label="Main navigation">
+			<evg-menu-item>
+				<a href="index.html">
+					<evg-menu-item-content>
+						Home
+					</evg-menu-item-content>
+				</a>
+			</evg-menu-item>
+			<evg-menu-item>
+				<a href="process.html">
+					<evg-menu-item-content>
+						Process
+					</evg-menu-item-content>
+				</a>
+			</evg-menu-item>
+			<evg-menu-item class="js-megamenu" active="false">
+				<button type="button" aria-controls="standards" aria-expanded="false">
+					<evg-menu-item-content>The Standards</evg-menu-item-content>
+					<evg-icon icon="chevron-down"></evg-icon>
+				</button>
+			</evg-menu-item>
+			<evg-menu-item>
+				<a href="contact.html">
+					<evg-menu-item-content>
+						Contact
+					</evg-menu-item-content>
+				</a>
+			</evg-menu-item>
+		</nav>
+	</evg-header-primary-nav>
+	<evg-header-secondary-nav>
+		<nav aria-label="Secondary navigation">
+			<evg-button variant="default">
+				<a href="https://wrap.ngo" target="_blank">Main site<evg-icon icon="external-link"></evg-icon></a>
+			</evg-button>
+		</nav>
+	</evg-header-secondary-nav>
+	<evg-header-mobile-nav>
+		<evg-button variant="default" width="square">
+			<button
+				aria-label="Open mobile navigation"
+				class="js-toggleMobileMenu"
+				type="button"
+			>
+				<evg-icon icon="menu" class="icon-open-close"></evg-icon>
+			</button>
+		</evg-button>
+	</evg-header-mobile-nav>
+</evg-header>
 
 <evg-header-mega-menu id="standards" role="menu" aria-label="standards" tabindex="-1">
-    <evg-grid gap="none">
-        <evg-grid-item small-mobile="3" desktop="2" fill="true">
-            <evg-section padding="lg" class="evg-theme-sand">
-                <evg-wrapper gutter="lg">
-                    <span class="evg-text-size-heading-md evg-text-family-heading evg-text-transform-uppercase evg-text-weight-bold">The Standards</span>
-                </evg-wrapper>
-            </evg-section>
-        </evg-grid-item>
-        <evg-grid-item grow="true" fill="true">
-            <evg-section padding="lg">
-                <evg-wrapper gutter="lg">
-                    <evg-menu-item>
-                        <a href="standards-preloved.html" role="menuitem">Preloved certified standard</a>
-                    </evg-menu-item>
-                    <evg-menu-item>
-                        <a href="standards-reusable.html" role="menuitem">Reusable certified standard</a>
-                    </evg-menu-item>
-                    <evg-menu-item>
-                        <a href="standards-refillable.html" role="menuitem">Refillable certified standard</a>
-                    </evg-menu-item>
-                    <evg-menu-item>
-                        <a href="standards-durable.html" role="menuitem">Durable certified</a>
-                    </evg-menu-item>
-                </evg-wrapper>
-            </evg-section>
-        </evg-grid-item>
-    </evg-grid>
+	<evg-grid gap="none">
+		<evg-grid-item small-mobile="3" desktop="2" fill="true">
+			<evg-section padding="lg" class="evg-theme-sand">
+				<evg-wrapper gutter="lg">
+					<span class="evg-text-size-heading-md evg-text-family-heading evg-text-transform-uppercase evg-text-weight-bold">The Standards</span>
+				</evg-wrapper>
+			</evg-section>
+		</evg-grid-item>
+		<evg-grid-item grow="true" fill="true">
+			<evg-section padding="lg">
+				<evg-wrapper gutter="lg">
+					<evg-menu-item>
+						<a href="standards-preloved.html" role="menuitem">Preloved certified standard</a>
+					</evg-menu-item>
+					<evg-menu-item>
+						<a href="standards-reusable.html" role="menuitem">Reusable certified standard</a>
+					</evg-menu-item>
+					<evg-menu-item>
+						<a href="standards-refillable.html" role="menuitem">Refillable certified standard</a>
+					</evg-menu-item>
+					<evg-menu-item>
+						<a href="standards-durable.html" role="menuitem">Durable certified</a>
+					</evg-menu-item>
+				</evg-wrapper>
+			</evg-section>
+		</evg-grid-item>
+	</evg-grid>
 </evg-header-mega-menu>
 
 
 
 <evg-drawer>
-  <dialog >
-    <evg-section padding="md">
-      <evg-wrapper>
-        <evg-grid
-          class="evg-spacing-bottom-lg"
-          justify-content="flex-end"
-        >
-          <evg-grid-item>
-            <evg-button width="square">
-              <button
-                aria-label="Close"
-                onClick={function Xs(){}}
-                type="button"
-              >
-                <evg-icon icon="close"></evg-icon>
-              </button>
-            </evg-button>
-          </evg-grid-item>
-        </evg-grid>
-        
-        <evg-menu-item>
-            <a href="about.html">
-                <evg-menu-item-content>
-                    About
-                </evg-menu-item-content>
-            </a>
-        </evg-menu-item>
-        <evg-divider />
-        <evg-menu-item>
-            <a href="process.html">
-                <evg-menu-item-content>
-                    Process
-                </evg-menu-item-content>
-            </a>
-        </evg-menu-item>
-        <evg-divider />
-        <evg-menu-item>
-            <a href="standards.html">
-                <evg-menu-item-content>
-                    The Standards
-                </evg-menu-item-content>
-            </a>
-        </evg-menu-item>
-        <evg-divider />
-        <evg-menu-item>
-            <a href="contact.html">
-                <evg-menu-item-content>
-                    Contact
-                </evg-menu-item-content>
-            </a>
-        </evg-menu-item>
-        <evg-divider />
-        <evg-menu-item>
-            <a href="certification.html">
-                <evg-menu-item-content>
-                    Certification Bodies
-                </evg-menu-item-content>
-            </a>
-        </evg-menu-item>
-      </evg-wrapper>
-    </evg-section>
-    <evg-section
-      class="evg-theme-sand"
-      padding="md"
-    >
-      <evg-wrapper>
-        <evg-menu-item>
-          <button type="button">
-            <evg-icon icon="user" />
-            <evg-menu-item-content>
-              Log in / Sign up
-            </evg-menu-item-content>
-          </button>
-        </evg-menu-item>
-        <evg-divider />
-        {{!-- <a title="Region">
-          <div className="evg-spacing-left-sm">
-            <evg-menu-item>
-              <a href="https://wrap.ngo">
-                Global
-              </a>
-            </evg-menu-item>
-            <evg-menu-item>
-              <a href="https://wrap.ngo">
-                Americas
-              </a>
-            </evg-menu-item>
-            <evg-menu-item>
-              <a href="https://wrap.ngo">
-                Asia Pacific
-              </a>
-            </evg-menu-item>
-            <evg-menu-item>
-              <a href="https://wrap.ngo">
-                EU
-              </a>
-            </evg-menu-item>
-            <evg-menu-item>
-              <a href="https://wrap.ngo">
-                Northern Ireland
-              </a>
-            </evg-menu-item>
-            <evg-menu-item>
-              <a href="https://wrap.ngo">
-                UK
-              </a>
-            </evg-menu-item>
-            <evg-menu-item>
-              <a href="https://wrap.ngo">
-                Cymru
-              </a>
-            </evg-menu-item>
-          </div>
-        </a> --}}
-        <evg-divider />
-      </evg-wrapper>
-    </evg-section>
+  <dialog class="mobile-menu">
+	<evg-section padding="md">
+	  <evg-wrapper>
+		<evg-grid
+		  class="evg-spacing-bottom-lg"
+		  justify-content="flex-end"
+		>
+		  <evg-grid-item>
+			<evg-button width="square">
+			  <button
+				aria-label="Close"
+				class="icon-open-close"
+				type="button"
+			  >
+				<evg-icon icon="close"></evg-icon>
+			  </button>
+			</evg-button>
+		  </evg-grid-item>
+		</evg-grid>
+		
+		<evg-menu-item>
+			<a href="index.html">
+				<evg-menu-item-content>
+					Home
+				</evg-menu-item-content>
+			</a>
+		</evg-menu-item>
+		<evg-divider></evg-divider>
+		<evg-menu-item>
+			<a href="process.html">
+				<evg-menu-item-content>
+					Process
+				</evg-menu-item-content>
+			</a>
+		</evg-menu-item>
+		<evg-divider></evg-divider>
+		<evg-menu-item>
+			<button class="js-submenu" type="button" aria-controls=":r1:" aria-expanded="false">
+				<evg-menu-item-content>The Standards</evg-menu-item-content>
+				<evg-icon icon="chevron-down"></evg-icon>
+			</button>
+			<evg-collapse open="false" id=":r1:">
+			<div class="evg-spacing-left-sm">
+				<evg-menu-item>
+					<a href="standards-preloved.html" role="menuitem">Preloved certified standard</a>
+				</evg-menu-item>
+				<evg-menu-item>
+					<a href="standards-reusable.html" role="menuitem">Reusable certified standard</a>
+				</evg-menu-item>
+				<evg-menu-item>
+					<a href="standards-refillable.html" role="menuitem">Refillable certified standard</a>
+				</evg-menu-item>
+				<evg-menu-item>
+					<a href="standards-durable.html" role="menuitem">Durable certified</a>
+				</evg-menu-item>
+			</div>
+			</evg-collapse>
+		</evg-menu-item>
+		<evg-divider></evg-divider>
+		<evg-menu-item>
+			<a href="contact.html">
+				<evg-menu-item-content>
+					Contact
+				</evg-menu-item-content>
+			</a>
+		</evg-menu-item>
+	  </evg-wrapper>
+	</evg-section>
+	<evg-section class="evg-theme-sand" padding="md">
+		<evg-wrapper>
+			<evg-menu-item>
+				<a href="https://wrap.ngo" target="_blank">
+					<evg-icon icon="external-link"></evg-icon>
+					<evg-menu-item-content>Main site</evg-menu-item-content>
+				</a>
+			</evg-menu-item>
+		</evg-wrapper>
+	  </evg-wrapper>
+	</evg-section>
   </dialog>
-</evg-drawer>
-
-
-<evg-drawer>
-    <dialog>
-        <evg-section padding="md">
-            <evg-wrapper>
-                <evg-grid justify-content="flex-end" class="evg-spacing-bottom-lg">
-                    <evg-grid-item>
-                        <evg-button width="square"><button type="button" aria-label="Close">
-                <evg-icon icon="close"></evg-icon></button></evg-button>
-                    </evg-grid-item>
-                </evg-grid>
-                <evg-menu-item><button type="button" aria-controls=":r0:" aria-expanded="false">
-            <evg-menu-item-content>What we do</evg-menu-item-content
-            ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                <evg-collapse open="false" id=":r0:">
-                    <div class="evg-spacing-left-sm">
-                        <evg-menu-item><button type="button" aria-controls=":r1:" aria-expanded="false">
-                <evg-menu-item-content>Circular living</evg-menu-item-content
-                ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                        <evg-collapse open="false" id=":r1:">
-                            <div class="evg-spacing-left-sm">
-                                <evg-menu-item><a href="https://wrap.ngo">Mission and vision</a></evg-menu-item>
-                                <evg-menu-item><a href="https://wrap.ngo">Services</a></evg-menu-item>
-                                <evg-menu-item><a href="https://wrap.ngo">Impact</a></evg-menu-item>
-                                <evg-menu-item><a href="https://wrap.ngo">Case studies</a></evg-menu-item>
-                                <evg-menu-item><a href="https://wrap.ngo">Key reports</a></evg-menu-item>
-                                <evg-menu-item><a href="https://wrap.ngo">Get in touch</a></evg-menu-item>
-                            </div>
-                        </evg-collapse>
-                        <evg-menu-item><button type="button" aria-controls=":r2:" aria-expanded="false">
-                <evg-menu-item-content>Focus areas</evg-menu-item-content
-                ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                        <evg-collapse open="false" id=":r2:">
-                            <div class="evg-spacing-left-sm">
-                                <evg-menu-item><a href="https://wrap.ngo">Future-proof food</a></evg-menu-item>
-                                <evg-menu-item><a href="https://wrap.ngo">Prevent problem plastics</a></evg-menu-item>
-                                <evg-menu-item><a href="https://wrap.ngo">Transform textiles</a></evg-menu-item>
-                                <evg-menu-item><a href="https://wrap.ngo">Accelerate the Circular Economy</a></evg-menu-item>
-                            </div>
-                        </evg-collapse>
-                    </div>
-                </evg-collapse>
-                <evg-divider></evg-divider>
-                <evg-menu-item><button type="button" aria-controls=":r3:" aria-expanded="false">
-            <evg-menu-item-content>Take action</evg-menu-item-content
-            ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                <evg-collapse open="false" id=":r3:">
-                    <evg-menu-item><button type="button" aria-controls=":r4:" aria-expanded="false">
-              <evg-menu-item-content>Future-proof food</evg-menu-item-content
-              ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                    <evg-collapse open="false" id=":r4:">
-                        <div class="evg-spacing-left-sm">
-                            <evg-menu-item><a href="https://wrap.ngo">Food Pact Network</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">UK Food and Drink Pact</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">UK Food and Drink Pact Water Roadmap</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">UK Food and Drink Pact Food Waste Reduction Roadmap</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Guardians of Grub</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Love Food Hate Waste</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">All food initiatives</a></evg-menu-item>
-                        </div>
-                    </evg-collapse>
-                    <evg-menu-item><button type="button" aria-controls=":r5:" aria-expanded="false">
-              <evg-menu-item-content>Prevent problem plastics</evg-menu-item-content
-              ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                    <evg-collapse open="false" id=":r5:">
-                        <div class="evg-spacing-left-sm">
-                            <evg-menu-item><a href="https://wrap.ngo">The Plastics Pact Network</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">UK Plastics Pact</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Collaborative partnerships</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Global Treaty to End Plastic Pollution</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">All plastics initiatives</a></evg-menu-item>
-                        </div>
-                    </evg-collapse>
-                    <evg-menu-item><button type="button" aria-controls=":r6:" aria-expanded="false">
-              <evg-menu-item-content>Transform textiles</evg-menu-item-content
-              ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                    <evg-collapse open="false" id=":r6:">
-                        <div class="evg-spacing-left-sm">
-                            <evg-menu-item><a href="https://wrap.ngo">Textiles Action Network</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Textiles 2030</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Circular Change Council</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Extended producer responsibility</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">All textiles initiatives</a></evg-menu-item>
-                        </div>
-                    </evg-collapse>
-                    <evg-menu-item><button type="button" aria-controls=":r7:" aria-expanded="false">
-              <evg-menu-item-content>Accelerate the circular economy</evg-menu-item-content
-              ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                    <evg-collapse open="false" id=":r7:">
-                        <div class="evg-spacing-left-sm">
-                            <evg-menu-item><a href="https://wrap.ngo">Business recycling support</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Circular Change Council</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Extended producer responsibility</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Finance for action and innovation</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Local authority recycling support</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Market analysis for the recycling industry</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Policy design and implementation</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">Recycle Now</a></evg-menu-item>
-                            <evg-menu-item><a href="https://wrap.ngo">All circular economy initiatives</a></evg-menu-item>
-                        </div>
-                    </evg-collapse>
-                </evg-collapse>
-                <evg-divider></evg-divider>
-                <evg-menu-item><button type="button" aria-controls=":r8:" aria-expanded="false">
-            <evg-menu-item-content>Resources</evg-menu-item-content
-            ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                <evg-collapse open="false" id=":r8:">
-                    <div class="evg-spacing-left-sm">
-                        <evg-menu-item><a href="https://wrap.ngo">Publications</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">Campaign assets</a></evg-menu-item>
-                    </div>
-                </evg-collapse>
-                <evg-divider></evg-divider>
-                <evg-menu-item><button type="button" aria-controls=":r9:" aria-expanded="false">
-            <evg-menu-item-content>About</evg-menu-item-content
-            ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                <evg-collapse open="false" id=":r9:">
-                    <div class="evg-spacing-left-sm">
-                        <evg-menu-item><a href="https://wrap.ngo">About us</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">Our team</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">Annual report</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">Careers</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">Media Centre</a></evg-menu-item>
-                    </div>
-                </evg-collapse>
-                <evg-divider></evg-divider>
-                <evg-menu-item><button type="button"><evg-menu-item-content>Latest</evg-menu-item-content></button></evg-menu-item>
-            </evg-wrapper>
-        </evg-section>
-        <evg-section padding="md" class="evg-theme-sand">
-            <evg-wrapper>
-                <evg-menu-item><button type="button">
-            <evg-icon icon="user"></evg-icon><evg-menu-item-content>Log in / Sign up</evg-menu-item-content>
-          </button></evg-menu-item>
-                <evg-divider></evg-divider>
-                <evg-menu-item><button type="button" aria-controls=":ra:" aria-expanded="false">
-            <evg-menu-item-content>Region</evg-menu-item-content
-            ><evg-icon icon="chevron-down"></evg-icon></button></evg-menu-item>
-                <evg-collapse open="false" id=":ra:">
-                    <div class="evg-spacing-left-sm">
-                        <evg-menu-item><a href="https://wrap.ngo">Global</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">Americas</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">Asia Pacific</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">EU</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">Northern Ireland</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">UK</a></evg-menu-item>
-                        <evg-menu-item><a href="https://wrap.ngo">Cymru</a></evg-menu-item>
-                    </div>
-                </evg-collapse>
-                <evg-divider></evg-divider>
-            </evg-wrapper>
-        </evg-section>
-    </dialog>
 </evg-drawer>

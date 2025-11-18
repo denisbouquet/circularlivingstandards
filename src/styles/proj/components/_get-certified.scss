@@ -7,16 +7,19 @@
 		position: relative;
 		counter-increment: step; // each item increments the counter
 		padding-top: 15px;
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 		@media (min-width: 1024px) {
+			margin-bottom: 0;
+		}
+		&:last-child {
 			margin-bottom: 0;
 		}
 	}
 	evg-grid-item::before {
 		content: counter(step);
 		position: absolute;
-		top: -2rem;
-		left: 12px;
+		top: -25px;
+		left: 6px;
 		background: var(--evg-color-lime);
 		font-weight: bold;
 		width: 32px;
@@ -27,6 +30,10 @@
 		justify-content: center;
 		font-size: 14px;
 		z-index: 2;
+		@media (min-width: 1024px) {
+			left: 12px;
+			top: -2rem;
+		}
 	}
 
 	evg-card {

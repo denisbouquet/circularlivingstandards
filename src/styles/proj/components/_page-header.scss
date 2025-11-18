@@ -37,3 +37,9 @@
 		margin-right: auto;
 	}
 }
+
+.ae-supergraphic-lime {
+    evg-supergraphic::part(svg) {
+        color: var(--evg-color-lime);
+    }
+}

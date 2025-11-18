@@ -11,6 +11,90 @@ if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
+// p in contact form 7
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+// REMOVE WP EMOJI
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+// remove wp version
+remove_action('wp_head', 'wp_generator');
+
+
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
+/**
+ * Prevent update notification for plugin
+ * http://www.thecreativedev.com/disable-updates-for-specific-plugin-in-wordpress/
+ * Place in theme functions.php or at bottom of wp-config.php
+ */
+function disable_plugin_updates( $value ) {
+  if ( isset($value) && is_object($value) ) {
+  	if ( isset( $value->response['advanced-custom-fields-pro/acf.php'] ) ) {
+      unset( $value->response['advanced-custom-fields-pro/acf.php'] );
+    }
+    if ( isset( $value->response['all-in-one-wp-migration/all-in-one-wp-migration.php'] ) ) {
+      unset( $value->response['all-in-one-wp-migration/all-in-one-wp-migration.php'] );
+    }
+  }
+  return $value;
+}
+add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
+
+/**
+* Allow additional MIME types
+* Use 'text/plain' instead of 'application/json' for JSON because of a current Wordpress core bug
+*/
+
+function add_upload_mimes( $types ) { 
+	$types['json'] = 'text/plain';
+	return $types;
+}
+add_filter( 'upload_mimes', 'add_upload_mimes' );
+
+
+/*
+* my_acf_json_save_point
+*/
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+function my_acf_json_save_point( $path ) {
+    
+    // update path
+    $path = get_stylesheet_directory() . '/afc-json';
+    
+    // return
+    return $path;  
+}
+ 
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+function my_acf_json_load_point( $paths ) {
+    
+    // remove original path (optional)
+    unset($paths[0]); 
+    
+    // append path
+    $paths[] = get_stylesheet_directory() . '/afc-json'; 
+    
+    // return
+    return $paths;
+}
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Website General Settings',
+		'menu_title'	=> 'Website Settings',
+		'menu_slug' 	=> 'Website-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> true
+	));
+}
+
+
+
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -141,11 +225,13 @@ function circularlivingstandards_scripts() {
 	wp_enqueue_style( 'circularlivingstandards-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'circularlivingstandards-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'circularlivingstandards-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', array(), '20232509', true );
+	// wp_enqueue_script( 'circularlivingstandards-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
+	wp_enqueue_script( 'custom-main-js', get_template_directory_uri() . '/dist/js/circularlivingstandards.js', array(), '20250320', true );
 }
 add_action( 'wp_enqueue_scripts', 'circularlivingstandards_scripts' );
 
@@ -176,3 +262,46 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+class Evergreen_Primary_Walker extends Walker_Nav_Menu {
+
+    // no <ul> levels – nav already exists in the template
+    public function start_lvl( &$output, $depth = 0, $args = array() ) {}
+    public function end_lvl( &$output, $depth = 0, $args = array() ) {}
+
+    public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+
+        // Only top level items
+        if ( $depth > 0 ) {
+            return;
+        }
+
+        $title = esc_html( $item->title );
+        $url   = esc_url( $item->url );
+
+        // Is this the “The standards” item? (check by title or a custom CSS class)
+        $is_standards = ( strtolower( trim( $item->title ) ) === 'the standards' );
+
+        if ( $is_standards ) {
+            $output .= '
+            <evg-menu-item class="js-megamenu" active="false">
+                <button type="button" aria-controls="standards" aria-expanded="false">
+                    <evg-menu-item-content>' . $title . '</evg-menu-item-content>
+                    <evg-icon icon="chevron-down"></evg-icon>
+                </button>
+            </evg-menu-item>';
+        } else {
+            $output .= '
+            <evg-menu-item>
+                <a href="' . $url . '">
+                    <evg-menu-item-content>' . $title . '</evg-menu-item-content>
+                </a>
+            </evg-menu-item>';
+        }
+    }
+
+    public function end_el( &$output, $item, $depth = 0, $args = array() ) {
+        // nothing needed
+    }
+}

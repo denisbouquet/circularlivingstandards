@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 23.906762 18.154139"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="social-youtube.svg"
+   width="23.906763"
+   height="18.154139"
+   inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.078125"
+     inkscape:cx="272.84211"
+     inkscape:cy="-173.71429"
+     inkscape:window-width="2560"
+     inkscape:window-height="1306"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1">
+    <sodipodi:guide
+       position="0,383.406"
+       orientation="0,546.20001"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="546.2,383.406"
+       orientation="384,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="546.2,-0.59398297"
+       orientation="0,-546.20001"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,-0.59398297"
+       orientation="-384,0"
+       id="guide4"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+  <path
+     d="M 23.407796,2.8413114 C 23.132049,1.720861 22.322317,0.84152029 21.29374,0.5436784 19.429172,0 11.953382,0 11.953382,0 c 0,0 -7.4757877,0 -9.3403576,0.5436784 C 1.5844468,0.84152029 0.77471575,1.720861 0.4989695,2.8413114 0,4.8694696 0,9.0959804 0,9.0959804 c 0,0 0,4.2265086 0.4989695,6.2546676 0.27574625,1.120452 1.0854773,1.96197 2.1140549,2.259811 1.8645699,0.543679 9.3403576,0.543679 9.3403576,0.543679 0,0 7.47579,0 9.340358,-0.543679 1.028577,-0.297841 1.838309,-1.144089 2.114056,-2.259811 0.498968,-2.028159 0.498968,-6.2546676 0.498968,-6.2546676 0,0 0,-4.2265108 -0.498968,-6.254669 z M 9.5110585,12.934824 V 5.2571372 l 6.2458725,3.8388432 z"
+     id="path1"
+     style="fill:#ffffff;stroke-width:0.0454892;image-rendering:auto" />
+</svg>

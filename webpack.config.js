@@ -242,7 +242,7 @@ module.exports =
              */
 
             {
-                test: /\.(ttf|eot|woff|woff2|jpe?g|gif|png|webp|avif|svg|wav|mp3?4?|webm|jsonp|xml|swf|json|geojson|topojson|csv)$/,
+                test: /\.(ttf|eot|woff|woff2|jpe?g|gif|png|webp|avif|svg|ico|wav|mp3?4?|webm|jsonp|xml|swf|json|geojson|topojson|csv)$/,
                 use :
                 [
                     {

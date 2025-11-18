@@ -50,10 +50,174 @@
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'menu-1',
+					'theme_location' => 'main',
 					'menu_id'        => 'primary-menu',
 				)
 			);
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+<evg-skip-link>
+  <a href="#skip-to-content">Skip to main content</a>
+</evg-skip-link>
+<evg-app>
+
+<evg-header class="evg-theme-default">
+	<evg-header-logo>
+		<a href="index.html">
+			<img
+				alt="WRAP logo"
+				height="32"
+				loading="eager"
+				src="<?php echo get_template_directory_uri(); ?>/dist/media/images/logo/forest.svg"
+				width="110"
+			/>
+		</a>
+	</evg-header-logo>
+	<evg-header-primary-nav>
+	    <nav aria-label="Main navigation">
+	        <?php
+	        wp_nav_menu( array(
+	            'theme_location' => 'main',
+	            'container'      => false,
+	            'items_wrap'     => '%3$s',            // no <ul>
+	            'walker'         => new Evergreen_Primary_Walker(),
+	        ) );
+	        ?>
+	    </nav>
+	</evg-header-primary-nav>
+	<evg-header-secondary-nav>
+		<nav aria-label="Secondary navigation">
+			<evg-button variant="default">
+				<a href="https://wrap.ngo" target="_blank">Main site<evg-icon icon="external-link"></evg-icon></a>
+			</evg-button>
+		</nav>
+	</evg-header-secondary-nav>
+	<evg-header-mobile-nav>
+		<evg-button variant="default" width="square">
+			<button
+				aria-label="Open mobile navigation"
+				class="js-toggleMobileMenu"
+				type="button"
+			>
+				<evg-icon icon="menu" class="icon-open-close"></evg-icon>
+			</button>
+		</evg-button>
+	</evg-header-mobile-nav>
+</evg-header>
+
+<evg-header-mega-menu id="standards" role="menu" aria-label="standards" tabindex="-1">
+	<evg-grid gap="none">
+		<evg-grid-item small-mobile="3" desktop="2" fill="true">
+			<evg-section padding="lg" class="evg-theme-sand">
+				<evg-wrapper gutter="lg">
+					<span class="evg-text-size-heading-md evg-text-family-heading evg-text-transform-uppercase evg-text-weight-bold">The Standards</span>
+				</evg-wrapper>
+			</evg-section>
+		</evg-grid-item>
+		<evg-grid-item grow="true" fill="true">
+			<evg-section padding="lg">
+				<evg-wrapper gutter="lg">
+					<evg-menu-item>
+						<a href="standards-preloved.html" role="menuitem">Preloved certified standard</a>
+					</evg-menu-item>
+					<evg-menu-item>
+						<a href="standards-reusable.html" role="menuitem">Reusable certified standard</a>
+					</evg-menu-item>
+					<evg-menu-item>
+						<a href="standards-refillable.html" role="menuitem">Refillable certified standard</a>
+					</evg-menu-item>
+					<evg-menu-item>
+						<a href="standards-durable.html" role="menuitem">Durable certified</a>
+					</evg-menu-item>
+				</evg-wrapper>
+			</evg-section>
+		</evg-grid-item>
+	</evg-grid>
+</evg-header-mega-menu>
+
+
+
+<evg-drawer>
+  <dialog class="mobile-menu">
+	<evg-section padding="md">
+	  <evg-wrapper>
+		<evg-grid
+		  class="evg-spacing-bottom-lg"
+		  justify-content="flex-end"
+		>
+		  <evg-grid-item>
+			<evg-button width="square">
+			  <button
+				aria-label="Close"
+				class="icon-open-close"
+				type="button"
+			  >
+				<evg-icon icon="close"></evg-icon>
+			  </button>
+			</evg-button>
+		  </evg-grid-item>
+		</evg-grid>
+		
+		<evg-menu-item>
+			<a href="index.html">
+				<evg-menu-item-content>
+					Home
+				</evg-menu-item-content>
+			</a>
+		</evg-menu-item>
+		<evg-divider></evg-divider>
+		<evg-menu-item>
+			<a href="process.html">
+				<evg-menu-item-content>
+					Process
+				</evg-menu-item-content>
+			</a>
+		</evg-menu-item>
+		<evg-divider></evg-divider>
+		<evg-menu-item>
+			<button class="js-submenu" type="button" aria-controls=":r1:" aria-expanded="false">
+				<evg-menu-item-content>The Standards</evg-menu-item-content>
+				<evg-icon icon="chevron-down"></evg-icon>
+			</button>
+			<evg-collapse open="false" id=":r1:">
+			<div class="evg-spacing-left-sm">
+				<evg-menu-item>
+					<a href="standards-preloved.html" role="menuitem">Preloved certified standard</a>
+				</evg-menu-item>
+				<evg-menu-item>
+					<a href="standards-reusable.html" role="menuitem">Reusable certified standard</a>
+				</evg-menu-item>
+				<evg-menu-item>
+					<a href="standards-refillable.html" role="menuitem">Refillable certified standard</a>
+				</evg-menu-item>
+				<evg-menu-item>
+					<a href="standards-durable.html" role="menuitem">Durable certified</a>
+				</evg-menu-item>
+			</div>
+			</evg-collapse>
+		</evg-menu-item>
+		<evg-divider></evg-divider>
+		<evg-menu-item>
+			<a href="contact.html">
+				<evg-menu-item-content>
+					Contact
+				</evg-menu-item-content>
+			</a>
+		</evg-menu-item>
+	  </evg-wrapper>
+	</evg-section>
+	<evg-section class="evg-theme-sand" padding="md">
+		<evg-wrapper>
+			<evg-menu-item>
+				<a href="https://wrap.ngo" target="_blank">
+					<evg-icon icon="external-link"></evg-icon>
+					<evg-menu-item-content>Main site</evg-menu-item-content>
+				</a>
+			</evg-menu-item>
+		</evg-wrapper>
+	  </evg-wrapper>
+	</evg-section>
+  </dialog>
+</evg-drawer>
