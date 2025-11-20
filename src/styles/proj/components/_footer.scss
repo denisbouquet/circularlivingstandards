@@ -1,3 +1,20 @@
+.ae-locations {
+    evg-menu-item {
+        align-items: baseline;
+        display: flex;
+        font: inherit;
+        color: var(--evg-color-lime);
+        font-size: var(--size, 1rem);
+        font-weight: var(--evg-font-weight-bold);
+        gap: 8px;
+        justify-content: flex-start;
+        letter-spacing: inherit;
+        line-height: 1;
+        padding: 8px;
+        width: 100%;
+    }
+}
+
 .social-icons a:after {
     display: none
 }
@@ -13,25 +30,13 @@
     background-repeat: no-repeat;
     height: 18px;
     width: auto;
-    display: inline-block
+    display: flex;
+    img {
+        display: block;
+        align-self: center;
+    }
 }
 
 .social-icons a.icon:hover {
     background-color: rgba(255,255,255,0.2);
-}
-
-.social-icons a.icon-instagram {
-    background-image: url(media/images/svg/social-instagram.svg)
-}
-
-.social-icons a.icon-twitter {
-    background-image: url(media/images/svg/social-x-twitter.svg)
-}
-
-.social-icons a.icon-linkedin {
-    background-image: url(media/images/svg/social-linkedin.svg)
-}
-
-.social-icons a.icon-youtube {
-    background-image: url(media/images/svg/social-youtube.svg)
 }

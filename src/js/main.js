@@ -25,7 +25,7 @@ import $ from 'jquery';
 
 // import Lenis from '@studio-freight/lenis';
 import { gsap } from "gsap";
-
+import Choices from "choices.js";
 
 let Site;
 // const isMobileDevice = utils.mobileAndTabletCheck();
@@ -66,6 +66,11 @@ let Site;
 			$('.js-chars-count textarea').on('input', function() {
 			    self.formCharsUpdate(this);
 			});
+
+			// https://github.com/Choices-js/Choices
+			if($('.js-choice').length > 0){
+				const choices = new Choices($('.js-choice select')[0], {removeItemButton: true,});
+			}
 		},
 		toggleMobileMenu: function (elt) {
 			$('.js-toggleMobileMenu').on('click', function(){
@@ -79,6 +84,10 @@ let Site;
 					$('.mobile-menu').find('.icon-open-close').attr('icon', 'menu');
 					$(this).find('.icon-open-close').attr('icon', 'menu');
 				}
+			});
+
+			$('.js-mobilemenu-close').on('click', function(){
+				$('.js-toggleMobileMenu').trigger('click');
 			});
 
 			$('.js-submenu').on('click', function(){

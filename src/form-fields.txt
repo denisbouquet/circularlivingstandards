@@ -1,0 +1,194 @@
+Get involved form fields
+
+first_name
+last_name
+job_title
+email (Work email)
+company (Organisation name)
+country
+cls_business_type_c (Business type)
+circular_by_design__c (Circular Living Standard of interest)
+cls_business_type_c (Areas of interest)
+additional_information
+how_did_you_hear_about_us
+
+
+---
+
+From: [first_name][last_name] [email]
+Subject: WRAP CLS Get involved form
+
+Message Body:
+[first_name]
+[last_name]
+[job_title]
+[email] (Work email)
+[company] (Organisation name)
+[country]
+[cls_business_type_c] (Business type)
+[circular_by_design__c] (Circular Living Standard of interest)
+[cls_business_type_c] (Areas of interest)
+[additional_information]
+[how_did_you_hear_about_us]
+
+
+-- 
+This is a notification that a contact form was submitted on your website ([_site_title] [_site_url]).
+
+
+
+<div class="form-item">
+
+<div class="fullname ae-field">
+<label class="half-left">First name <i class="form-required"></i>[text* your-name autocomplete:first_name] </label>
+<label class="half-right"> Your name<i class="form-required"></i>[text* your-name autocomplete:last_name] </label>
+</div>
+
+<div class="ae-field">
+<label> Job title<i class="form-required"></i>
+    [text* job_title] </label>
+</div>
+
+<div class="ae-field">
+<label> Work email<i class="form-required"></i>
+    [email* email autocomplete:email] </label>
+</div>
+
+<div class="ae-field">
+<label> Organisation name<i class="form-required"></i>
+    [text* company] </label>
+</div>
+
+<div class="ae-field">
+<label> Country<i class="form-required"></i>
+[select* country include_blank "Afghanistan" "Albania" "Algeria" "American Samoa" "Andorra" "Angola" "Anguilla" "Antarctica" "Antigua & Barbuda" "Argentina" "Armenia" "Aruba" "Ascension Island" "Australia" "Austria" "Azerbaijan" "Bahamas" "Bahrain" "Bangladesh" "Barbados" "Belarus" "Belgium" "Belize" "Benin" "Bermuda" "Bhutan" "Bolivia" "Bosnia & Herzegovina" "Botswana" "Bouvet Island" "Brazil" "British Indian Ocean Territory" "British Virgin Islands" "Brunei" "Bulgaria" "Burkina Faso" "Burundi" "Cambodia" "Cameroon" "Canada" "Canary Islands" "Cape Verde" "Caribbean Netherlands" "Cayman Islands" "Central African Republic" "Ceuta & Melilla" "Chad" "Chile" "China" "Christmas Island" "Clipperton Island" "Cocos (Keeling) Islands" "Colombia" "Comoros" "Congo - Brazzaville" "Congo - Kinshasa" "Cook Islands" "Costa Rica" "Croatia" "Cuba" "Curaçao" "Cyprus" "Czechia" "Côte d’Ivoire" "Denmark" "Diego Garcia" "Djibouti" "Dominica" "Dominican Republic" "Ecuador" "Egypt" "El Salvador" "Equatorial Guinea" "Eritrea" "Estonia" "Eswatini" "Ethiopia" "Falkland Islands" "Faroe Islands" "Fiji" "Finland" "France" "French Guiana" "French Polynesia" "French Southern Territories" "Gabon" "Gambia" "Georgia" "Germany" "Ghana" "Gibraltar" "Greece" "Greenland" "Grenada" "Guadeloupe" "Guam" "Guatemala" "Guernsey" "Guinea" "Guinea-Bissau" "Guyana" "Haiti" "Heard & McDonald Islands" "Honduras" "Hong Kong SAR China" "Hungary" "Iceland" "India" "Indonesia" "Iran" "Iraq" "Ireland" "Isle of Man" "Israel" "Italy" "Jamaica" "Japan" "Jersey" "Jordan" "Kazakhstan" "Kenya" "Kiribati" "Kosovo" "Kuwait" "Kyrgyzstan" "Laos" "Latvia" "Lebanon" "Lesotho" "Liberia" "Libya" "Liechtenstein" "Lithuania" "Luxembourg" "Macao SAR China" "Madagascar" "Malawi" "Malaysia" "Maldives" "Mali" "Malta" "Marshall Islands" "Martinique" "Mauritania" "Mauritius" "Mayotte" "Mexico" "Micronesia" "Moldova" "Monaco" "Mongolia" "Montenegro" "Montserrat" "Morocco" "Mozambique" "Myanmar (Burma)" "Namibia" "Nauru" "Nepal" "Netherlands" "Netherlands Antilles" "New Caledonia" "New Zealand" "Nicaragua" "Niger" "Nigeria" "Niue" "Norfolk Island" "Northern Mariana Islands" "North Korea" "North Macedonia" "Norway" "Oman" "Outlying Oceania" "Pakistan" "Palau" "Palestinian Territories" "Panama" "Papua New Guinea" "Paraguay" "Peru" "Philippines" "Pitcairn Islands" "Poland" "Portugal" "Puerto Rico" "Qatar" "Romania" "Russia" "Rwanda" "Réunion" "Samoa" "San Marino" "Sark" "Saudi Arabia" "Senegal" "Serbia" "Seychelles" "Sierra Leone" "Singapore" "Sint Maarten" "Slovakia" "Slovenia" "Solomon Islands" "Somalia" "South Africa" "South Georgia & South Sandwich Islands" "South Korea" "South Sudan" "Spain" "Sri Lanka" "St. Barthélemy" "St. Helena" "St. Kitts & Nevis" "St. Lucia" "St. Martin" "St. Pierre & Miquelon" "St. Vincent & Grenadines" "Sudan" "Suriname" "Svalbard & Jan Mayen" "Sweden" "Switzerland" "Syria" "São Tomé & Príncipe" "Taiwan" "Tajikistan" "Tanzania" "Thailand" "Timor-Leste" "Togo" "Tokelau" "Tonga" "Trinidad & Tobago" "Tristan da Cunha" "Tunisia" "Turkmenistan" "Turks & Caicos Islands" "Tuvalu" "Türkiye" "U.S. Outlying Islands" "U.S. Virgin Islands" "Uganda" "Ukraine" "United Arab Emirates" "United Kingdom" "United States" "Uruguay" "Uzbekistan" "Vanuatu" "Vatican City" "Venezuela" "Vietnam" "Wallis & Futuna" "Western Sahara" "Yemen" "Zambia" "Zimbabwe" "Åland Islands"]
+  </label>
+</div>
+
+<div class="ae-field">
+<label> Business type
+[select* cls_business_type_c "- None -" "NGO" "CPG" "Brand" "Marketplace" "Retailer" "Certification Body" "Manufacturer" "Other..."]</label>
+</div>
+
+<div class="ae-field">
+<label> Circular Living Standard of interest
+[select circular_by_design__c "- None -" "Preloved" "Reusable" "Refillable" "Durable"]</label>
+</div>
+
+<div class="ae-field">
+<label> Areas of interest<i class="form-required"></i>
+[select* cls_business_type_c multiple include_blank "Becoming certified" "Being kept informed" "Category expansion" "Currently on Amazon's Climate Pledge Friendly Program" "Joining the Standards Management Committee" "Supplying data"]</label>
+</div>
+
+
+<div class="ae-field">
+<label> Additional information
+    [textarea additional_information maxlength:255 placeholder] Add additional information about area(s) of interest [/textarea] </label>
+</div>
+
+<div class="ae-field">
+<label> How did you hear about us
+[select how_did_you_hear_about_us "- None -" "Website" "Social media" "Email newsletter" "Conference / Trade show" "Partner organisation" "Referral" "Trade magazine online" "Amazon SLF 2025"]</label>
+</div>
+
+<evg-grid justify-content="flex-start"><evg-grid-item><evg-button variant="primary">
+[submit "Submit"]
+</evg-button></evg-grid-item></evg-grid>
+
+</div>
+
+
+------------------------
+------------
+------------------------
+------------
+------------------------
+------------
+------------
+------------
+------------
+------------
+------------
+Contact form
+
+first_name
+last_name
+email (Work email)
+job_title
+organisation_name
+country
+enquiry_subject
+message
+comms_consent
+
+
+From: [first_name] [last_name] [email]
+Subject: [your-subject]
+
+Message Body:
+[first_name]
+[last_name]
+[email]
+[job_title]
+[organisation_name]
+[country]
+[enquiry_subject]
+[message]
+[comms_consent]
+
+-- 
+This is a notification that a contact form was submitted on your website ([_site_title] [_site_url]).
+
+
+
+
+
+<div class="form-item">
+
+<div class="fullname ae-field">
+<label class="half-left">First name <i class="form-required"></i>[text* your-name autocomplete:first_name] </label>
+<label class="half-right"> Your name<i class="form-required"></i>[text* your-name autocomplete:last_name] </label>
+</div>
+
+
+<div class="ae-field">
+<label> Work email<i class="form-required"></i>
+    [email* email autocomplete:email] </label>
+</div>
+<div class="ae-field">
+<label> Job title<i class="form-required"></i>
+    [text* job_title] </label>
+</div>
+<div class="ae-field">
+<label> Organisation name<i class="form-required"></i>
+    [text* organisation_name] </label>
+</div>
+<div class="ae-field">
+<label> Country<i class="form-required"></i>
+[select* country include_blank "Afghanistan" "Albania" "Algeria" "American Samoa" "Andorra" "Angola" "Anguilla" "Antarctica" "Antigua & Barbuda" "Argentina" "Armenia" "Aruba" "Ascension Island" "Australia" "Austria" "Azerbaijan" "Bahamas" "Bahrain" "Bangladesh" "Barbados" "Belarus" "Belgium" "Belize" "Benin" "Bermuda" "Bhutan" "Bolivia" "Bosnia & Herzegovina" "Botswana" "Bouvet Island" "Brazil" "British Indian Ocean Territory" "British Virgin Islands" "Brunei" "Bulgaria" "Burkina Faso" "Burundi" "Cambodia" "Cameroon" "Canada" "Canary Islands" "Cape Verde" "Caribbean Netherlands" "Cayman Islands" "Central African Republic" "Ceuta & Melilla" "Chad" "Chile" "China" "Christmas Island" "Clipperton Island" "Cocos (Keeling) Islands" "Colombia" "Comoros" "Congo - Brazzaville" "Congo - Kinshasa" "Cook Islands" "Costa Rica" "Croatia" "Cuba" "Curaçao" "Cyprus" "Czechia" "Côte d’Ivoire" "Denmark" "Diego Garcia" "Djibouti" "Dominica" "Dominican Republic" "Ecuador" "Egypt" "El Salvador" "Equatorial Guinea" "Eritrea" "Estonia" "Eswatini" "Ethiopia" "Falkland Islands" "Faroe Islands" "Fiji" "Finland" "France" "French Guiana" "French Polynesia" "French Southern Territories" "Gabon" "Gambia" "Georgia" "Germany" "Ghana" "Gibraltar" "Greece" "Greenland" "Grenada" "Guadeloupe" "Guam" "Guatemala" "Guernsey" "Guinea" "Guinea-Bissau" "Guyana" "Haiti" "Heard & McDonald Islands" "Honduras" "Hong Kong SAR China" "Hungary" "Iceland" "India" "Indonesia" "Iran" "Iraq" "Ireland" "Isle of Man" "Israel" "Italy" "Jamaica" "Japan" "Jersey" "Jordan" "Kazakhstan" "Kenya" "Kiribati" "Kosovo" "Kuwait" "Kyrgyzstan" "Laos" "Latvia" "Lebanon" "Lesotho" "Liberia" "Libya" "Liechtenstein" "Lithuania" "Luxembourg" "Macao SAR China" "Madagascar" "Malawi" "Malaysia" "Maldives" "Mali" "Malta" "Marshall Islands" "Martinique" "Mauritania" "Mauritius" "Mayotte" "Mexico" "Micronesia" "Moldova" "Monaco" "Mongolia" "Montenegro" "Montserrat" "Morocco" "Mozambique" "Myanmar (Burma)" "Namibia" "Nauru" "Nepal" "Netherlands" "Netherlands Antilles" "New Caledonia" "New Zealand" "Nicaragua" "Niger" "Nigeria" "Niue" "Norfolk Island" "Northern Mariana Islands" "North Korea" "North Macedonia" "Norway" "Oman" "Outlying Oceania" "Pakistan" "Palau" "Palestinian Territories" "Panama" "Papua New Guinea" "Paraguay" "Peru" "Philippines" "Pitcairn Islands" "Poland" "Portugal" "Puerto Rico" "Qatar" "Romania" "Russia" "Rwanda" "Réunion" "Samoa" "San Marino" "Sark" "Saudi Arabia" "Senegal" "Serbia" "Seychelles" "Sierra Leone" "Singapore" "Sint Maarten" "Slovakia" "Slovenia" "Solomon Islands" "Somalia" "South Africa" "South Georgia & South Sandwich Islands" "South Korea" "South Sudan" "Spain" "Sri Lanka" "St. Barthélemy" "St. Helena" "St. Kitts & Nevis" "St. Lucia" "St. Martin" "St. Pierre & Miquelon" "St. Vincent & Grenadines" "Sudan" "Suriname" "Svalbard & Jan Mayen" "Sweden" "Switzerland" "Syria" "São Tomé & Príncipe" "Taiwan" "Tajikistan" "Tanzania" "Thailand" "Timor-Leste" "Togo" "Tokelau" "Tonga" "Trinidad & Tobago" "Tristan da Cunha" "Tunisia" "Turkmenistan" "Turks & Caicos Islands" "Tuvalu" "Türkiye" "U.S. Outlying Islands" "U.S. Virgin Islands" "Uganda" "Ukraine" "United Arab Emirates" "United Kingdom" "United States" "Uruguay" "Uzbekistan" "Vanuatu" "Vatican City" "Venezuela" "Vietnam" "Wallis & Futuna" "Western Sahara" "Yemen" "Zambia" "Zimbabwe" "Åland Islands"]
+  </label>
+</div>
+
+<div class="ae-field">
+<label> Enquiry subject<i class="form-required"></i>
+[select* enquiry_subject "- Select -" "Plastics" "Food" "Textiles" "Circular Economy" "The Business of Recycling" "Recycle Now" "Love Food Hate Waste" "Media Enquiry" "Other"]</label>
+</div>
+
+<div class="ae-field js-chars-count">
+<label> Message
+    [textarea message maxlength:255] </label>
+</div>
+
+<p><span class="js-chars">255 character(s) remaining</span></p>
+
+<p>From time to time, WRAP would like to share updates about our initiatives, services, and other relevant content that may be of interest to you. If you consent to being contacted for these purposes, please tick the box.</p>
+
+<div class="ae-checkbox">
+[checkbox comms_consent use_label_element "I agree to receive communications from WRAP"]
+</div>
+
+<evg-grid justify-content="flex-start"><evg-grid-item><evg-button variant="primary">
+[submit "Submit"]
+</evg-button></evg-grid-item></evg-grid>
+
+</div>

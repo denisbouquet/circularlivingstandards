@@ -1,0 +1,175 @@
+{
+    "key": "group_691db43e49496",
+    "title": "Components settings",
+    "fields": [
+        {
+            "key": "field_691db43e57fa4",
+            "label": "Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_691f0a80288a0",
+            "label": "Wrapper-size",
+            "name": "wrapper-size",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "md": "md",
+                "xl": "xl",
+                "xxl": "xxl"
+            },
+            "default_value": "xl",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_691db46857fa5",
+            "label": "Animation",
+            "name": "animation",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "fade": "Fade",
+                "fade-in-up": "Slide & Fade"
+            },
+            "default_value": "none",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_691db49757fa6",
+            "label": "Theme",
+            "name": "theme",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "default",
+                "sand": "sand",
+                "forest": "forest",
+                "forest-light": "forest-light",
+                "earth": "earth",
+                "earth-light": "earth-light",
+                "lime": "lime",
+                "lime-light": "lime-light",
+                "sky": "sky",
+                "sky-light": "sky-light"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_691db55857fa7",
+            "label": "Padding",
+            "name": "padding",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "xs": "xs",
+                "sm": "sm",
+                "md": "md",
+                "lg": "lg",
+                "xl": "xl",
+                "fluid-sm": "fluid-sm",
+                "fluid": "fluid",
+                "fluid-lg": "fluid-lg",
+                "none": "none"
+            },
+            "default_value": "fluid",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_691db5ef57fa8",
+            "label": "Padding override",
+            "name": "padding_override",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "none",
+                "remove-padding-top": "remove padding top",
+                "remove-padding-bottom": "remove padding bottom"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1763660874
+}

@@ -53,7 +53,67 @@
     height: 6px;
     margin: 0 .3em
 }
+.js-choice {
+	text-transform: none;
+	.choices {
+		margin-top: 8px;
+		.choices__inner {
+			padding-top: 0 !important;
+			font-family: inherit;
+			border-radius: .4rem;
+			// padding: 0 10px;
+		}
+		.choices__input {
+			font-size: 16px;
+			color: inherit !important;
+			font-weight: 500;
+			color: black;
+		}
+		.choices__list--multiple .choices__item {
+			background-color: var(--evg-color-lime);
+			border-color: var(--evg-color-lime);
+			color: black;
+			margin-top: 3px;
+		}
+	}
 
+	.choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+		margin: 0;
+		margin-left: 6px;
+	}
+
+	.choices__inner {
+	    // background: 0 0;
+	    // padding: 0
+	}
+
+	.choices__inner input[type=text].choices__input {
+	    display: inline-block
+	}
+
+	.choices__list--multiple .choices__item {
+	    color: var(--black);
+	    background-color: var(--evg-color-lime);
+	    border: 0;
+	}
+
+	.choices[data-type*=select-multiple] .choices__button,.choices[data-type*=text] .choices__button {
+	    border-left-color: var(--black);
+	    background-image: url(../media/images/svg/menu-burger-opened.svg)
+	}
+
+	.choices__list .choices__item {
+	    font-size: .875rem;
+	    line-height: 1
+	}
+
+	@media only screen and (min-width: 1024px) {
+	    .choices__list .choices__item {
+	        font-size:1rem;
+	        line-height: 1.2
+	    }
+	}
+}
 
 input[type=date],input[type=email],input[type=number],input[type=tel],input[type=text],select,textarea {
     display: block;
@@ -79,6 +139,9 @@ input[type=date],input[type=email],input[type=number],input[type=tel],input[type
     border: 1px solid #dde3e8
 }
 
+.wpcf7-list-item {
+	margin-left: 0;
+}
 .wpcf7-not-valid-tip {
 	text-transform: none;
 	padding: 6px 0;

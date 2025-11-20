@@ -18,79 +18,57 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MNKNMNRC');</script>
+	<!-- End Google Tag Manager -->
 </head>
 
 <body <?php body_class(); ?>>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNKNMNRC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'circularlivingstandards' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$circularlivingstandards_description = get_bloginfo( 'description', 'display' );
-			if ( $circularlivingstandards_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $circularlivingstandards_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'circularlivingstandards' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'main',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
+	
 <evg-skip-link>
-  <a href="#skip-to-content">Skip to main content</a>
+	<a href="#skip-to-content"><?php esc_html_e( 'Skip to main content', 'circularlivingstandards' ); ?></a>
 </evg-skip-link>
 <evg-app>
 
 <evg-header class="evg-theme-default">
 	<evg-header-logo>
-		<a href="index.html">
+		<?php $logo_nav = get_field('logo_main_navigation', 'option');; ?>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<img
 				alt="WRAP logo"
 				height="32"
 				loading="eager"
-				src="<?php echo get_template_directory_uri(); ?>/dist/media/images/logo/forest.svg"
+				src="<?php echo $logo_nav; ?>"
 				width="110"
 			/>
 		</a>
 	</evg-header-logo>
 	<evg-header-primary-nav>
-	    <nav aria-label="Main navigation">
-	        <?php
-	        wp_nav_menu( array(
-	            'theme_location' => 'main',
-	            'container'      => false,
-	            'items_wrap'     => '%3$s',            // no <ul>
-	            'walker'         => new Evergreen_Primary_Walker(),
-	        ) );
-	        ?>
-	    </nav>
+			<nav aria-label="Main navigation">
+					<?php
+					wp_nav_menu( array(
+							'menu_id' => 'main',
+							'container'      => false,
+							'items_wrap'     => '%3$s',            // no <ul>
+							'walker'         => new Evergreen_Primary_Walker(),
+					) );
+					?>
+			</nav>
 	</evg-header-primary-nav>
 	<evg-header-secondary-nav>
 		<nav aria-label="Secondary navigation">
 			<evg-button variant="default">
-				<a href="https://wrap.ngo" target="_blank">Main site<evg-icon icon="external-link"></evg-icon></a>
+				<a href="https://wrap.ngo" target="_blank">Main WRAP site<evg-icon icon="external-link"></evg-icon></a>
 			</evg-button>
 		</nav>
 	</evg-header-secondary-nav>
@@ -107,7 +85,7 @@
 	</evg-header-mobile-nav>
 </evg-header>
 
-<evg-header-mega-menu id="standards" role="menu" aria-label="standards" tabindex="-1">
+<!-- <evg-header-mega-menu id="standards" role="menu" aria-label="standards" tabindex="-1">
 	<evg-grid gap="none">
 		<evg-grid-item small-mobile="3" desktop="2" fill="true">
 			<evg-section padding="lg" class="evg-theme-sand">
@@ -135,89 +113,79 @@
 			</evg-section>
 		</evg-grid-item>
 	</evg-grid>
+</evg-header-mega-menu> -->
+<evg-header-mega-menu id="standards" role="menu" aria-label="standards" tabindex="-1">
+		<evg-grid gap="none">
+				<evg-grid-item small-mobile="3" desktop="2" fill="true">
+						<evg-section padding="lg" class="evg-theme-sand">
+								<evg-wrapper gutter="lg">
+										<span class="evg-text-size-heading-md evg-text-family-heading evg-text-transform-uppercase evg-text-weight-bold">
+												The Standards
+										</span>
+								</evg-wrapper>
+						</evg-section>
+				</evg-grid-item>
+
+				<evg-grid-item grow="true" fill="true">
+						<evg-section padding="lg">
+								<evg-wrapper gutter="lg">
+										<?php
+										wp_nav_menu( array(
+												'menu_id' => 'main',
+												'container'      => false,
+												'items_wrap'     => '%3$s',
+												'walker'         => new Evergreen_Mega_Walker(),
+										) );
+										?>
+								</evg-wrapper>
+						</evg-section>
+				</evg-grid-item>
+		</evg-grid>
 </evg-header-mega-menu>
 
 
-
 <evg-drawer>
-  <dialog class="mobile-menu">
-	<evg-section padding="md">
-	  <evg-wrapper>
-		<evg-grid
-		  class="evg-spacing-bottom-lg"
-		  justify-content="flex-end"
-		>
-		  <evg-grid-item>
-			<evg-button width="square">
-			  <button
-				aria-label="Close"
-				class="icon-open-close"
-				type="button"
-			  >
-				<evg-icon icon="close"></evg-icon>
-			  </button>
-			</evg-button>
-		  </evg-grid-item>
-		</evg-grid>
-		
-		<evg-menu-item>
-			<a href="index.html">
-				<evg-menu-item-content>
-					Home
-				</evg-menu-item-content>
-			</a>
-		</evg-menu-item>
-		<evg-divider></evg-divider>
-		<evg-menu-item>
-			<a href="process.html">
-				<evg-menu-item-content>
-					Process
-				</evg-menu-item-content>
-			</a>
-		</evg-menu-item>
-		<evg-divider></evg-divider>
-		<evg-menu-item>
-			<button class="js-submenu" type="button" aria-controls=":r1:" aria-expanded="false">
-				<evg-menu-item-content>The Standards</evg-menu-item-content>
-				<evg-icon icon="chevron-down"></evg-icon>
-			</button>
-			<evg-collapse open="false" id=":r1:">
-			<div class="evg-spacing-left-sm">
+	<dialog class="mobile-menu">
+		<evg-section padding="md">
+			<evg-wrapper>
+
+				<!-- Close button row -->
+				<evg-grid class="evg-spacing-bottom-lg" justify-content="flex-end">
+					<evg-grid-item>
+						<evg-button width="square">
+							<button
+								aria-label="Close"
+								class="js-mobilemenu-close"
+								class="icon-open-close"
+								type="button"
+							>
+								<evg-icon icon="close"></evg-icon>
+							</button>
+						</evg-button>
+					</evg-grid-item>
+				</evg-grid>
+
+				<?php
+				wp_nav_menu( array(
+						'theme_location' => 'menu-1',   // use your location slug
+						'container'      => false,
+						'items_wrap'     => '%3$s',     // no <ul>, just items
+						'walker'         => new Evergreen_Mobile_Walker(),
+				) );
+				?>
+
+			</evg-wrapper>
+		</evg-section>
+		<evg-section class="evg-theme-sand" padding="md">
+			<evg-wrapper>
 				<evg-menu-item>
-					<a href="standards-preloved.html" role="menuitem">Preloved certified standard</a>
+					<a href="https://wrap.ngo" target="_blank">
+						<evg-icon icon="external-link"></evg-icon>
+						<evg-menu-item-content>Main WRAP site</evg-menu-item-content>
+					</a>
 				</evg-menu-item>
-				<evg-menu-item>
-					<a href="standards-reusable.html" role="menuitem">Reusable certified standard</a>
-				</evg-menu-item>
-				<evg-menu-item>
-					<a href="standards-refillable.html" role="menuitem">Refillable certified standard</a>
-				</evg-menu-item>
-				<evg-menu-item>
-					<a href="standards-durable.html" role="menuitem">Durable certified</a>
-				</evg-menu-item>
-			</div>
-			</evg-collapse>
-		</evg-menu-item>
-		<evg-divider></evg-divider>
-		<evg-menu-item>
-			<a href="contact.html">
-				<evg-menu-item-content>
-					Contact
-				</evg-menu-item-content>
-			</a>
-		</evg-menu-item>
-	  </evg-wrapper>
-	</evg-section>
-	<evg-section class="evg-theme-sand" padding="md">
-		<evg-wrapper>
-			<evg-menu-item>
-				<a href="https://wrap.ngo" target="_blank">
-					<evg-icon icon="external-link"></evg-icon>
-					<evg-menu-item-content>Main site</evg-menu-item-content>
-				</a>
-			</evg-menu-item>
-		</evg-wrapper>
-	  </evg-wrapper>
-	</evg-section>
-  </dialog>
+			</evg-wrapper>
+			</evg-wrapper>
+		</evg-section>
+	</dialog>
 </evg-drawer>

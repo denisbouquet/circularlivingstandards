@@ -26,6 +26,22 @@ remove_action('wp_head', 'wp_generator');
 @ini_set( 'max_execution_time', '300' );
 
 /**
+ * Allow SVG and JSON uploads.
+ * (JSON uses text/plain due to WP core bug)
+ */
+function custom_upload_mimes( $mimes ) {
+
+    // Allow SVG
+    $mimes['svg'] = 'image/svg+xml';
+
+    // Allow JSON (WordPress bug workaround)
+    $mimes['json'] = 'text/plain';
+
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'custom_upload_mimes' );
+
+/**
  * Prevent update notification for plugin
  * http://www.thecreativedev.com/disable-updates-for-specific-plugin-in-wordpress/
  * Place in theme functions.php or at bottom of wp-config.php
@@ -42,17 +58,6 @@ function disable_plugin_updates( $value ) {
   return $value;
 }
 add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
-
-/**
-* Allow additional MIME types
-* Use 'text/plain' instead of 'application/json' for JSON because of a current Wordpress core bug
-*/
-
-function add_upload_mimes( $types ) { 
-	$types['json'] = 'text/plain';
-	return $types;
-}
-add_filter( 'upload_mimes', 'add_upload_mimes' );
 
 
 /*
@@ -303,5 +308,136 @@ class Evergreen_Primary_Walker extends Walker_Nav_Menu {
 
     public function end_el( &$output, $item, $depth = 0, $args = array() ) {
         // nothing needed
+    }
+}
+
+class Evergreen_Mega_Walker extends Walker_Nav_Menu {
+
+    public function start_lvl( &$output, $depth = 0, $args = array() ) {}
+    public function end_lvl( &$output, $depth = 0, $args = array() ) {}
+
+    public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+
+        // Only print submenu items (children)
+        if ( $depth === 0 ) {
+            return; // skip top-level items like Home, Process, The standards, Contact
+        }
+
+        $title = esc_html( $item->title );
+        $url   = esc_url( $item->url );
+
+        $output .= '
+        <evg-menu-item>
+            <a href="' . $url . '" role="menuitem">' . $title . '</a>
+        </evg-menu-item>';
+    }
+
+    public function end_el( &$output, $item, $depth = 0, $args = array() ) {}
+}
+
+
+class Evergreen_Mobile_Walker extends Walker_Nav_Menu {
+
+    /**
+     * Mark items that have children so we can treat them as "The Standards" style.
+     */
+    public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
+        if ( isset( $children_elements[ $element->ID ] ) && ! empty( $children_elements[ $element->ID ] ) ) {
+            $element->has_children = true;
+        } else {
+            $element->has_children = false;
+        }
+
+        parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+    }
+
+    public function start_lvl( &$output, $depth = 0, $args = array() ) {
+        // Only open the collapse wrapper for the first level of children (depth 1)
+        if ( $depth === 0 ) {
+            // ID used by button aria-controls and collapse id
+            $collapse_id = ':r1:'; // or 'submenu-standards' if you prefer
+
+            $output .= '
+                <evg-collapse open="false" id="' . esc_attr( $collapse_id ) . '">
+                    <div class="evg-spacing-left-sm">
+            ';
+        }
+    }
+
+    public function end_lvl( &$output, $depth = 0, $args = array() ) {
+        if ( $depth === 0 ) {
+            $output .= '
+                    </div>
+                </evg-collapse>
+            ';
+        }
+    }
+
+    public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+
+        $title = esc_html( $item->title );
+        $url   = esc_url( $item->url );
+        $has_children = ! empty( $item->has_children );
+
+        // ─────────────────────────────────────────────────────
+        // TOP-LEVEL ITEMS
+        // ─────────────────────────────────────────────────────
+        if ( $depth === 0 ) {
+
+            // "The Standards" (or any item with children)
+            if ( $has_children ) {
+
+                $collapse_id = ':r1:'; // must match start_lvl / button aria-controls
+
+                $output .= '
+                    <evg-menu-item>
+                        <button class="js-submenu"
+                                type="button"
+                                aria-controls="' . esc_attr( $collapse_id ) . '"
+                                aria-expanded="false">
+                            <evg-menu-item-content>' . $title . '</evg-menu-item-content>
+                            <evg-icon icon="chevron-down"></evg-icon>
+                        </button>
+                ';
+                // Note: we DO NOT close <evg-menu-item> here.
+                // Children + collapse wrapper are injected by start_lvl/end_lvl.
+            }
+
+            // Normal items (Home, Process, Contact)
+            else {
+                $output .= '
+                    <evg-menu-item>
+                        <a href="' . $url . '">
+                            <evg-menu-item-content>' . $title . '</evg-menu-item-content>
+                        </a>
+                    </evg-menu-item>
+                ';
+                // Divider between items if you want it here (optional)
+                $output .= '<evg-divider></evg-divider>';
+            }
+        }
+
+        // ─────────────────────────────────────────────────────
+        // CHILD ITEMS (inside "The Standards" collapse)
+        // ─────────────────────────────────────────────────────
+        else {
+            $output .= '
+                <evg-menu-item>
+                    <a href="' . $url . '" role="menuitem">' . $title . '</a>
+                </evg-menu-item>
+            ';
+        }
+    }
+
+    public function end_el( &$output, $item, $depth = 0, $args = array() ) {
+
+        // Close the wrapping <evg-menu-item> and add divider
+        if ( $depth === 0 && ! empty( $item->has_children ) ) {
+            $output .= '
+                    </evg-menu-item>
+                    <evg-divider></evg-divider>
+            ';
+        }
+        // For simple items we already closed <evg-menu-item> and added divider in start_el.
     }
 }
