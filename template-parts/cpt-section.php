@@ -11,6 +11,7 @@ $theme            = get_sub_field( 'theme' );
 $wrappersize      = get_sub_field( 'wrapper-size' );     
 $padding          = get_sub_field( 'padding' );          
 $padding_override = get_sub_field( 'padding_override' ); 
+$id = get_sub_field( 'id' ); 
 
 
 // defaults
@@ -21,7 +22,7 @@ $section_classes = trim( $section_theme . ' ' . ( $padding_override ?: '' ) );
 $has_animation = $animation && $animation !== 'none';
 ?>
 
-<evg-section padding="<?php echo esc_attr( $section_padding ); ?>"
+<evg-section <?php if(!empty($id)) { echo 'id="'.esc_attr( $id ).'"'; } ?> padding="<?php echo esc_attr( $section_padding ); ?>"
              class="<?php echo esc_attr( $section_classes ); ?>">
 	<?php if ( $has_animation ) : ?>
 		<evg-enter delay="0.5" type="<?php echo esc_attr( $animation ); ?>">

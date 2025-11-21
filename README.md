@@ -14,7 +14,7 @@ This bespoke WordPress theme is built on top of **_s (Underscores)** — a light
 
 ### `/src`
 This is where the development source files live.  
-All editable SCSS, JS, components, and build assets are stored here.
+All editable SCSS, JS, hbs static components, and build assets (images, MarrSansCondensed fonts) are stored here.
 
 ### `/dist`
 Automatically generated build output.  
@@ -48,11 +48,11 @@ Theme components follow the Evergreen component patterns provided by WRAP:
 
 You must have Evergreen loaded globally for components to work correctly.
 
-## 🗂️ CMS & ACF Guide
+## 🗂️ CMS Guide
 
-A full editorial/CMS guide (ACF field structure, content model, admin usage) is available here:
+A short CMS guide is available here:
 
-👉 https://docs.google.com/document/d/12wtHz2kJYe8pVEiFgpqc6b8KfUGOqqSgT6fRAhifgbE/edit?tab=t.0
+👉 https://docs.google.com/document/d/12wtHz2kJYe8pVEiFgpqc6b8KfUGOqqSgT6fRAhifgbE/
 
 **Document name:** *CircularLivingStandards CMS by WRAP*
 

@@ -16,7 +16,7 @@ $steps = get_sub_field( 'step' );
 
 $theme   = ! empty( $settings['theme'] ) ? $settings['theme'] : 'evg-theme-sand';
 $padding = ! empty( $settings['padding'] ) ? $settings['padding'] : 'fluid';
-
+$id = get_sub_field( 'id' ); 
 $padding_override = ! empty( $settings['padding_override'] ) ? $settings['padding_override'] : '';
 $animation        = ! empty( $settings['animation'] ) ? $settings['animation'] : '';
 
@@ -29,6 +29,7 @@ $has_animation = $animation && 'none' !== $animation;
 ?>
 
 <evg-section
+	<?php if(!empty($id)) { echo 'id="'.esc_attr( $id ).'"'; } ?>
 	class="<?php echo esc_attr( $section_classes ); ?>"
 	padding="<?php echo esc_attr( $padding ); ?>"
 >

@@ -1,6 +1,5 @@
-.ae-related-standards {
-	evg-card-img {
-		aspect-ratio: 36 / 16;
+.ae-ways-get-involved {
+	evg-img {
 		overflow: hidden;
 		img {
 			transition: transform 0.5s ease;
@@ -9,6 +8,9 @@
 	a:hover {
 		img {
 			transform: scale(1.1);
+		}
+		h3 {
+			color: var(--evg-color-forest-75);
 		}
 	}
 }

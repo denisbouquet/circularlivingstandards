@@ -9,6 +9,7 @@ $animation        = get_sub_field( 'animation' );        // e.g. 'fade-in-up' or
 $theme            = get_sub_field( 'theme' ) ?: 'default';
 $padding          = get_sub_field( 'padding' ) ?: 'fluid';
 $padding_override = get_sub_field( 'padding_override' ); // optional extra class
+$id = get_sub_field( 'id' ); 
 
 // Right link (top-right button)
 $right_link = get_sub_field( 'right_link' );
@@ -24,7 +25,7 @@ $has_animation = $animation && 'none' !== $animation;
 ?>
 
 <?php if ( $items ) : ?>
-<evg-section padding="<?php echo esc_attr( $padding ); ?>" class="<?php echo esc_attr( $section_classes ); ?>">
+<evg-section padding="<?php echo esc_attr( $padding ); ?>" class="ae-ways-get-involved <?php echo esc_attr( $section_classes ); ?>">
 	<?php if ( $has_animation ) : ?>
 		<evg-enter delay="0.5" type="<?php echo esc_attr( $animation ); ?>">
 	<?php endif; ?>

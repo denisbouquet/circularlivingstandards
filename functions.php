@@ -25,6 +25,15 @@ remove_action('wp_head', 'wp_generator');
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
 
+function my_wpcf7_form_elements($html) {
+    $text_to_replace = '&#8212;Please choose an option&#8212;'; // Be aware of the em dash
+    $new_text = '- Select -';
+    $html = str_replace($text_to_replace, $new_text, $html);
+    return $html;
+}
+add_filter('wpcf7_form_elements', 'my_wpcf7_form_elements');
+
+
 /**
  * Allow SVG and JSON uploads.
  * (JSON uses text/plain due to WP core bug)

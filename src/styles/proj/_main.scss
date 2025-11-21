@@ -9,10 +9,6 @@
 @use 'vendor/choice-js';
 @use 'vendor/wp';
 @use 'vendor/wrap';
-// @use 'vendor/slick';
-// @use 'vendor/twentytwenty';
-// @use 'vendor/nouislider';
-// @use 'vendor/plyr';
 
 @use 'components/header';
 @use 'components/text';
@@ -20,6 +16,7 @@
 @use 'components/spacing';
 @use 'components/accordion';
 @use 'components/get-involved-form';
+@use 'components/ways-get-involved';
 @use 'components/page-header';
 @use 'components/standards-list';
 @use 'components/get-certified';
@@ -39,12 +36,8 @@ html, body {
 	scroll-behavior: smooth;
 	margin: 0;
 	padding: 0;
-	// height: 100%;
-	// font-family: $font-family-primary;
-	// // font-size: 62.5%;
-	// -webkit-font-smoothing: antialiased;
-	// -moz-osx-font-smoothing: grayscale;
-	// color: $color-viiv-blue;
-	// background-color: $color-bg;
 }
 
+.grecaptcha-badge {
+	display: none;
+}

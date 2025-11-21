@@ -96,7 +96,7 @@ $short_classes = array_filter( [
 ] );
 ?>
 
-<evg-section padding="none">
+<evg-section <?php if(!empty($id)) { echo 'id="'.esc_attr( $id ).'"'; } ?> padding="none">
 	<evg-wrapper size="xl" class="evg-longform">
 		<div class="evg-text-size-body-lg">
 

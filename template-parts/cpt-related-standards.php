@@ -82,7 +82,7 @@ if ( $standards ) {
 	$cards = array_slice( $cards, 0, 3 );
 
 	if ( $cards ) : ?>
-		<evg-section padding="fluid" class="evg-theme-earth-light ae-related-standards">
+		<evg-section  <?php if(!empty($id)) { echo 'id="'.esc_attr( $id ).'"'; } ?> padding="fluid" class="evg-theme-earth-light ae-related-standards">
 			<evg-wrapper size="xxl">
 				<h2 class="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
 					<?php echo esc_html( $section_title ); ?>
