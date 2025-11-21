@@ -42,5 +42,9 @@
 .ae-supergraphic-lime {
     evg-supergraphic::part(svg) {
         color: var(--evg-color-lime);
+        display: none;
+        @media (min-width: 1024px) {
+        	display: block;
+        }
     }
 }

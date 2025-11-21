@@ -2,6 +2,9 @@
 	evg-supergraphic[position=bottom-left]::part(svg) {
 		left: 0%;
 		top: 0;
-		transform: translateX(-90%);
+		transform: translateX(-100%);
+		@media (min-width: 1024px) {
+			transform: translateX(-90%);
+		}
 	}
 }
