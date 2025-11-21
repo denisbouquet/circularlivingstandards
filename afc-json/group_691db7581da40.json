@@ -120,7 +120,7 @@
                 "evg-text-size-heading-lg": "lg",
                 "evg-text-size-heading-xl": "xl"
             },
-            "default_value": "md",
+            "default_value": "evg-text-size-heading-md",
             "return_format": "value",
             "allow_null": 0,
             "layout": "horizontal"
@@ -191,5 +191,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763662384
+    "modified": 1763719790
 }

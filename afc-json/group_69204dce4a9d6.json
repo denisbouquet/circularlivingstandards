@@ -1,10 +1,10 @@
 {
-    "key": "group_691f060d0cc90",
-    "title": "Text block (short)",
+    "key": "group_69204dce4a9d6",
+    "title": "Stat",
     "fields": [
         {
-            "key": "field_691f060d105b7",
-            "label": "Copy",
+            "key": "field_69204e22aa656",
+            "label": "Stat copy",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -20,9 +20,29 @@
             "endpoint": 0
         },
         {
-            "key": "field_691f060d105bc",
-            "label": "Copy",
-            "name": "copy",
+            "key": "field_69204dceaa653",
+            "label": "Stat number",
+            "name": "stat_number",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_69204df6aa654",
+            "label": "Stat copy",
+            "name": "stat_copy",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -35,13 +55,13 @@
             },
             "default_value": "",
             "maxlength": "",
-            "rows": "",
+            "rows": 2,
             "placeholder": "",
-            "new_lines": "wpautop"
+            "new_lines": ""
         },
         {
-            "key": "field_691f060d105bf",
-            "label": "Setting",
+            "key": "field_69204e06aa655",
+            "label": "Settings",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -57,9 +77,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_691f060d105c2",
-            "label": "Align",
-            "name": "align",
+            "key": "field_69204e41aa657",
+            "label": "Wrapper size",
+            "name": "wrapper_size",
             "aria-label": "",
             "type": "button_group",
             "instructions": "",
@@ -71,41 +91,19 @@
                 "id": ""
             },
             "choices": {
-                "evg-text-align-left": "left",
-                "evg-text-align-center": "center"
+                "sm": "sm",
+                "md": "md",
+                "lg": "lg",
+                "xl": "xl",
+                "xxl": "xxl"
             },
-            "default_value": "",
+            "default_value": "md",
             "return_format": "value",
             "allow_null": 0,
             "layout": "horizontal"
         },
         {
-            "key": "field_691f060d105c5",
-            "label": "Font-size",
-            "name": "font-size",
-            "aria-label": "",
-            "type": "button_group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "evg-text-size-body-sm": "sm",
-                "evg-text-size-body-md": "md",
-                "evg-text-size-body-lg": "lg",
-                "evg-text-size-body-xl": "xl"
-            },
-            "default_value": "evg-text-size-body-md",
-            "return_format": "value",
-            "allow_null": 0,
-            "layout": "horizontal"
-        },
-        {
-            "key": "field_691f060d105c7",
+            "key": "field_69204e5eaa658",
             "label": "Spacing bottom",
             "name": "spacing_bottom",
             "aria-label": "",
@@ -124,7 +122,7 @@
                 "evg-spacing-bottom-lg": "lg",
                 "none": "none"
             },
-            "default_value": "",
+            "default_value": "md",
             "return_format": "value",
             "allow_null": 0,
             "layout": "horizontal"
@@ -145,8 +143,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": false,
+    "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763719665
+    "modified": 1763725381
 }

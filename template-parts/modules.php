@@ -36,8 +36,16 @@ while (have_rows('modules')) {
 		include(locate_template('template-parts/cpt-ways-to-get-involved.php'));
 	}
 
+	elseif (get_row_layout() == "eligible_products") {
+		include(locate_template('template-parts/cpt-eligible-products.php'));
+	}
+
 	elseif (get_row_layout() == "single_card") {
 		include(locate_template('template-parts/cpt-single-card.php'));
+	}
+
+	elseif (get_row_layout() == "related_standards") {
+		include(locate_template('template-parts/cpt-related-standards.php'));
 	}
 
 

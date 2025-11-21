@@ -278,6 +278,38 @@
                                     ],
                                     "min": "",
                                     "max": ""
+                                },
+                                "layout_6920513c94cf7": {
+                                    "key": "layout_6920513c94cf7",
+                                    "name": "stat",
+                                    "label": "Stat",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6920514094cfa",
+                                            "label": "Stat",
+                                            "name": "stat",
+                                            "aria-label": "",
+                                            "type": "clone",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "clone": [
+                                                "group_69204dce4a9d6"
+                                            ],
+                                            "display": "seamless",
+                                            "layout": "block",
+                                            "prefix_label": 0,
+                                            "prefix_name": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
                                 }
                             },
                             "min": "",
@@ -710,6 +742,66 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_692048989abb6": {
+                    "key": "layout_692048989abb6",
+                    "name": "eligible_products",
+                    "label": "Eligible products",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_692048a49abb9",
+                            "label": "Eligible products",
+                            "name": "eligible_products",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_692047f5d6336"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6920515ffa622": {
+                    "key": "layout_6920515ffa622",
+                    "name": "related_standards",
+                    "label": "Related standards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69205173fa625",
+                            "label": "Info",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Content filled in Website Settings",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -737,5 +829,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763660410
+    "modified": 1763727170
 }

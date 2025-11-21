@@ -34,6 +34,10 @@ while (have_rows('content')) {
 		include(locate_template('template-parts/cpt-logo-list.php'));
 	}
 
+	elseif (get_row_layout() == "stat") {
+		include(locate_template('template-parts/cpt-stat.php'));
+	}
+
 	
 }
 ?>
