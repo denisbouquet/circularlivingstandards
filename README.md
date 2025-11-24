@@ -54,7 +54,6 @@ A short CMS guide is available here:
 
 👉 https://docs.google.com/document/d/12wtHz2kJYe8pVEiFgpqc6b8KfUGOqqSgT6fRAhifgbE/
 
-**Document name:** *CircularLivingStandards CMS by WRAP*
 
 ## ✔️ Recommended Additional Notes
 

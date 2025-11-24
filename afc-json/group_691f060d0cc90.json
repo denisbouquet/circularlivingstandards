@@ -124,7 +124,7 @@
                 "evg-spacing-bottom-lg": "lg",
                 "none": "none"
             },
-            "default_value": "",
+            "default_value": "evg-spacing-bottom-md",
             "return_format": "value",
             "allow_null": 0,
             "layout": "horizontal"
@@ -148,5 +148,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763719665
+    "modified": 1763986121
 }

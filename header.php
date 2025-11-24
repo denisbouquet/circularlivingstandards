@@ -8,7 +8,6 @@
  *
  * @package circularlivingstandards
  */
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -16,7 +15,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -85,35 +83,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</evg-header-mobile-nav>
 </evg-header>
 
-<!-- <evg-header-mega-menu id="standards" role="menu" aria-label="standards" tabindex="-1">
-	<evg-grid gap="none">
-		<evg-grid-item small-mobile="3" desktop="2" fill="true">
-			<evg-section padding="lg" class="evg-theme-sand">
-				<evg-wrapper gutter="lg">
-					<span class="evg-text-size-heading-md evg-text-family-heading evg-text-transform-uppercase evg-text-weight-bold">The Standards</span>
-				</evg-wrapper>
-			</evg-section>
-		</evg-grid-item>
-		<evg-grid-item grow="true" fill="true">
-			<evg-section padding="lg">
-				<evg-wrapper gutter="lg">
-					<evg-menu-item>
-						<a href="standards-preloved.html" role="menuitem">Preloved certified standard</a>
-					</evg-menu-item>
-					<evg-menu-item>
-						<a href="standards-reusable.html" role="menuitem">Reusable certified standard</a>
-					</evg-menu-item>
-					<evg-menu-item>
-						<a href="standards-refillable.html" role="menuitem">Refillable certified standard</a>
-					</evg-menu-item>
-					<evg-menu-item>
-						<a href="standards-durable.html" role="menuitem">Durable certified</a>
-					</evg-menu-item>
-				</evg-wrapper>
-			</evg-section>
-		</evg-grid-item>
-	</evg-grid>
-</evg-header-mega-menu> -->
 <evg-header-mega-menu id="standards" role="menu" aria-label="standards" tabindex="-1">
 		<evg-grid gap="none">
 				<evg-grid-item small-mobile="3" desktop="2" fill="true">
@@ -167,7 +136,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 				<?php
 				wp_nav_menu( array(
-						'theme_location' => 'menu-1',   // use your location slug
+						'menu_id' => 'main',   // use your location slug
 						'container'      => false,
 						'items_wrap'     => '%3$s',     // no <ul>, just items
 						'walker'         => new Evergreen_Mobile_Walker(),

@@ -314,7 +314,7 @@
                             },
                             "min": "",
                             "max": "",
-                            "button_label": "Add Row"
+                            "button_label": "Add module"
                         },
                         {
                             "key": "field_691f06df41db9",
@@ -332,6 +332,38 @@
                             },
                             "clone": [
                                 "group_691db43e49496"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_692048989abb6": {
+                    "key": "layout_692048989abb6",
+                    "name": "eligible_products",
+                    "label": "Eligible products",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_692048a49abb9",
+                            "label": "Eligible products",
+                            "name": "eligible_products",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_692047f5d6336"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -402,7 +434,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add item",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -523,6 +555,70 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_691f34d00b164": {
+                    "key": "layout_691f34d00b164",
+                    "name": "how_to_get_certified",
+                    "label": "How to get certified",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_691f34d00b166",
+                            "label": "How to get certified",
+                            "name": "how_to_get_certified",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_691f330270e54"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_691efdcbfd0dd": {
+                    "key": "layout_691efdcbfd0dd",
+                    "name": "single_card",
+                    "label": "Single card",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_691efdd5fd0e2",
+                            "label": "Card",
+                            "name": "card",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_691efcbfb42fb"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_691ee4d12c489": {
                     "key": "layout_691ee4d12c489",
                     "name": "standards_list",
@@ -567,7 +663,7 @@
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add item",
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
@@ -647,18 +743,18 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_691efdcbfd0dd": {
-                    "key": "layout_691efdcbfd0dd",
-                    "name": "single_card",
-                    "label": "Single card",
+                "layout_6920515ffa622": {
+                    "key": "layout_6920515ffa622",
+                    "name": "related_standards",
+                    "label": "Related standards",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_691efdd5fd0e2",
-                            "label": "Card",
-                            "name": "card",
+                            "key": "field_69205173fa625",
+                            "label": "Info",
+                            "name": "",
                             "aria-label": "",
-                            "type": "clone",
+                            "type": "message",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -667,13 +763,9 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "clone": [
-                                "group_691efcbfb42fb"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
+                            "message": "Content filled in Website Settings",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -710,98 +802,6 @@
                     ],
                     "min": "",
                     "max": ""
-                },
-                "layout_691f34d00b164": {
-                    "key": "layout_691f34d00b164",
-                    "name": "how_to_get_certified",
-                    "label": "How to get certified",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_691f34d00b166",
-                            "label": "How to get certified",
-                            "name": "how_to_get_certified",
-                            "aria-label": "",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_691f330270e54"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_692048989abb6": {
-                    "key": "layout_692048989abb6",
-                    "name": "eligible_products",
-                    "label": "Eligible products",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_692048a49abb9",
-                            "label": "Eligible products",
-                            "name": "eligible_products",
-                            "aria-label": "",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_692047f5d6336"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_6920515ffa622": {
-                    "key": "layout_6920515ffa622",
-                    "name": "related_standards",
-                    "label": "Related standards",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_69205173fa625",
-                            "label": "Info",
-                            "name": "",
-                            "aria-label": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Content filled in Website Settings",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
                 }
             },
             "min": "",
@@ -829,5 +829,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763727170
+    "modified": 1763981594
 }

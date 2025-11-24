@@ -55,11 +55,6 @@
         }
         &:hover {
             color: #0B301A;
-            // svg {
-            //     path {
-            //         stroke: #0B301A;
-            //     }
-            // }
         }
 
     }
@@ -75,14 +70,10 @@
         > div {
             color: #0B301A;
             padding: 25px 0;
+            p {
+                max-width: 850px;
+            }
         }
-        // li {
-        //  display: block;
-        //  margin-bottom: 20px;
-        //  @include bp-xl {
-        //      margin-bottom: 32px;
-        //  }
-        // }
         a {
             color: #0B301A;
             text-decoration: underline;

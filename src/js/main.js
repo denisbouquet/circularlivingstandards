@@ -24,8 +24,12 @@ import $ from 'jquery';
 // import shave from 'shave';
 
 // import Lenis from '@studio-freight/lenis';
-import { gsap } from "gsap";
+
 import Choices from "choices.js";
+
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger); 
 
 let Site;
 // const isMobileDevice = utils.mobileAndTabletCheck();
@@ -47,6 +51,7 @@ let Site;
 			self.toggleMobileMenu();
 			self.accordions();
 			self.form();
+			self.scrolltriggerAnimations();
 
 			
 		},
@@ -221,6 +226,16 @@ let Site;
 			// 	});
 			// });
 
+			if($('.ae-page-header__bg').length > 0) {
+console.log('===  main.js [226] ===');
+				// ScrollTrigger.create({
+				// 	trigger: '.ae-page-header-full',
+				// 	markers: true,
+				// 	start: "top top",
+				// 	end: "bottom top",
+				// 	animation: gsap.to('.ae-page-header-full .evg-text-align-center', {yPercent: 10, duration: 1 })
+				// });
+			}
 
 			// 	ScrollTrigger matchMedia
 			ScrollTrigger.saveStyles("");

@@ -1,6 +1,6 @@
 {
     "key": "group_691d94e9d1d15",
-    "title": "Footer + Related standards",
+    "title": "Website global settings",
     "fields": [
         {
             "key": "field_691daa987a809",
@@ -704,5 +704,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763658205
+    "modified": 1763981021
 }

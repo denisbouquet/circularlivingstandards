@@ -100,7 +100,7 @@
                 "evg-text-size-body-lg": "lg",
                 "evg-text-size-body-xl": "xl"
             },
-            "default_value": "sm",
+            "default_value": "evg-text-size-body-md",
             "return_format": "value",
             "allow_null": 0,
             "layout": "horizontal"
@@ -149,5 +149,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763662170
+    "modified": 1763981637
 }

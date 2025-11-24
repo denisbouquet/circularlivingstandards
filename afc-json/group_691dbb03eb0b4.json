@@ -115,11 +115,12 @@
                 "id": ""
             },
             "choices": {
+                "auto": "auto",
                 "full-width": "full-width",
                 "full-width-mobile": "full-width-mobile",
                 "square": "square"
             },
-            "default_value": "full-width-mobile",
+            "default_value": "auto",
             "return_format": "value",
             "allow_null": 0,
             "layout": "horizontal"
@@ -166,5 +167,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1763659887
+    "modified": 1763980839
 }
