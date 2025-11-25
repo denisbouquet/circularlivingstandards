@@ -15,6 +15,23 @@
     }
 }
 
+footer evg-wrapper p {
+    a { 
+        text-decoration: underline; 
+        text-underline-offset: 2px; 
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+@media (hover: hover) {
+    footer evg-menu-item a:hover {
+        background-color: var(--evg-color-forest-75);
+        color: var(--evg-color-cloud);
+    }
+}
+
 .social-icons a:after {
     display: none
 }
@@ -38,5 +55,5 @@
 }
 
 .social-icons a.icon:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: var(--evg-color-forest-75);
 }

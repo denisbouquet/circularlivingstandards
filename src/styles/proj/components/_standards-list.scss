@@ -5,4 +5,9 @@
 		margin-right: auto;
 		margin-bottom: 28px;
 	}
+	&:hover {
+		h3 {
+			color: var(--evg-color-forest-75);
+		}
+	}
 }

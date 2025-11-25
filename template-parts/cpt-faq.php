@@ -5,7 +5,7 @@ $right_link = get_sub_field( 'right_link' ); // ACF link (array)
 ?>
 <evg-section padding="fluid">
 	<evg-wrapper size="xxl">
-		<evg-grid justify-content="space-between" align-items="center" class="evg-spacing-bottom-lg">
+		<evg-grid justify-content="space-between" wrap="wrap" align-items="center" class="evg-spacing-bottom-lg">
 			<evg-grid-item>
 				<h2 class="evg-text-size-heading-md evg-text-transform-uppercase">
 					<?php echo esc_html( $title ); ?>

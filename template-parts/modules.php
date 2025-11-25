@@ -27,6 +27,10 @@ while (have_rows('modules')) {
 	elseif (get_row_layout() == "section") {
 		include(locate_template('template-parts/cpt-section.php'));
 	}
+
+	elseif (get_row_layout() == "standards_list") {
+		include(locate_template('template-parts/cpt-standard-list.php'));
+	}
 	
 	elseif (get_row_layout() == "how_to_get_certified") {
 		include(locate_template('template-parts/cpt-how-to-get-certified.php'));

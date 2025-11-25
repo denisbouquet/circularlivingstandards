@@ -14,11 +14,11 @@
 
         .icon {
             position: absolute;
-            top: 0;
+            top: 50%;
+            transform: translateY(-50%);
             will-change: transform;
             transition: transform 0.3s ease;
             right: 25px;
-            bottom: 0;
             align-self: center;
             width: 13px;
             height: 13px;

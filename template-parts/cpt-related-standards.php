@@ -107,7 +107,7 @@ if ( $standards ) {
 										<?php echo esc_html( $card['title'] ); ?>
 									</h3>
 
-									<evg-button variant="primary" width="full-width-mobile">
+									<evg-button variant="primary" width="auto">
 										<a href="<?php echo esc_url( $card['url'] ); ?>">
 											<?php esc_html_e( 'Read more', 'textdomain' ); ?>
 										</a>

@@ -48,6 +48,10 @@ Theme components follow the Evergreen component patterns provided by WRAP:
 
 You must have Evergreen loaded globally for components to work correctly.
 
+## ✳️ Figma 
+
+https://www.figma.com/design/6TFUOojLUkNbudGZJt9jrh/WRAP---Circular-Living-Standards-Web-Design?node-id=307-5326&t=83CgZPWbvJzWNMRE-0
+
 ## 🗂️ CMS Guide
 
 A short CMS guide is available here:
