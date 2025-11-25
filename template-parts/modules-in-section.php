@@ -2,8 +2,9 @@
 while (have_rows('content')) {
 	the_row();
 	if (get_row_layout() == "copy") {
-		$wysiwyg = get_sub_field('copy');
-		echo $wysiwyg;
+		// $wysiwyg = get_sub_field('copy');
+		// echo $wysiwyg;
+		include(locate_template('template-parts/cpt-wysiwyg.php'));
 	}
 
 	elseif (get_row_layout() == "title") {

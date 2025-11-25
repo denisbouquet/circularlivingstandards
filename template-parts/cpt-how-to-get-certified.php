@@ -73,7 +73,7 @@ $has_animation = $animation && 'none' !== $animation;
 
 								<?php if ( $sentence ) : ?>
 									<p>
-										<?php echo esc_html( $sentence ); ?>
+										<?php echo $sentence; ?>
 									</p>
 								<?php endif; ?>
 							</evg-card-content>

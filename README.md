@@ -58,6 +58,10 @@ A short CMS guide is available here:
 
 👉 https://docs.google.com/document/d/12wtHz2kJYe8pVEiFgpqc6b8KfUGOqqSgT6fRAhifgbE/
 
+## 🗂️ QA document
+
+👉 https://docs.google.com/spreadsheets/d/1z9aaze3auAcWfGGLc2g_nE_OLtB8C957/edit?pli=1&gid=1792849308#gid=1792849308
+
 
 ## ✔️ Recommended Additional Notes
 

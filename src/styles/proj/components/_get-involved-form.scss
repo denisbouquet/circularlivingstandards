@@ -7,4 +7,12 @@
 			transform: translateX(-90%);
 		}
 	}
+
+	p a {
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }

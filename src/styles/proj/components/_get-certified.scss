@@ -14,6 +14,13 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		a {
+			text-decoration: underline;
+			text-underline-offset: 0.15em;
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 	evg-grid-item::before {
 		content: counter(step);
